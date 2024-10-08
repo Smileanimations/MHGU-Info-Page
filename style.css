@@ -4,39 +4,39 @@ body {
 
 
 .img {
-    max-width: 600px;
-    max-height: 200px;
-    width: auto;
+    /* Size Constraints */
+    width: 270px;
     height: auto;
-    background: url(Images/UI/background.png) center/cover no-repeat red;
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
-    position: relative;
-    z-index: 2;
+    max-width: 95%;
+    max-height: 200px;
+    margin: 2em;
+    padding: 20px 28px;
+
+    /* Background Styling */
+    background: url(Images/UI/background.png) center/cover no-repeat;
+    background-color: blue;
+    /* Fallback color if the image is not available */
+
+    /* Border Radius */
+    border-radius: 5px;
+
+    /* Box Shadow for Depth */
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.5), 4px 4px 25px rgba(62, 61, 61, 0.76);
+
+    /* Flexbox for Centering Content */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    width: 270px;
-    margin: 2em;
+
+    /* Grid for Layout */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 180px 1fr auto;
-    box-shadow: 0 15px 30px -10px #000;
+
+    /* Interaction */
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 95%;
-    max-height: 95%;
     transition: max-width 0.4s ease-in-out, max-height 0.4s ease-in-out;
-    max-width: 120%;
-    max-height: 120%;
-    box-shadow: 0 15px 30px -10px #000;
-    cursor: pointer;
-    box-shadow: 4px 4px 25px rgba(62, 61, 61, 0.763);
-    padding: 20px 28px;
+    z-index: 2;
     font-weight: bolder;
 }
