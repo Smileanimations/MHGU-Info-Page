@@ -1,0 +1,12 @@
+body {
+    background-image: "Images/UI/bg_main03.jpg";
+}
+
+
+.img {
+    display: block;
+    max-width:600px;
+    max-height:200px;
+    width: auto;
+    height: auto;
+}
