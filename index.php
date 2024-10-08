@@ -4,6 +4,10 @@ $files = scandir("Images/Weapons/");
 
 ?>
 
+<script>
+
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +17,19 @@ $files = scandir("Images/Weapons/");
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php foreach ($files as $file) {?>
-        <p><?=$file;?></p>
-        <img src="Images/Weapons/<?=$file;?>" alt="" class="img">
-    <?php }?>
+<div>
+    <div>
+        <div>
+            <img src="images/UI/Logo-MHGU.webp" alt="" id="logo">
+        </div>
+        <div id="sectionsplit">
+        </div>
+    </div>
+    <div class="videobackground">
+        <video autoplay muted loop>
+            <source src="images/UI/WebsiteTrailer.mp4">
+        </video>
+    </div>
+</div>
 </body>
 </html>
