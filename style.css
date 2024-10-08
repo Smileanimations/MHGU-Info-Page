@@ -1,7 +1,10 @@
 body {
-    background-image: "Images/UI/bg_main03.jpg";
+    font-family: 'Source Sans 3','メイリオ',Meiryo,'ＭＳ Ｐゴシック','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', 'verdana', 'Helvetica','Arial', 'sans-serif';
+    position: static;
+    padding: 0;
+    margin: 0;
 }
-
+    
 
 .img {
     /* Size Constraints */
@@ -41,35 +44,41 @@ body {
     font-weight: bolder;
 }
 
-#buysection {
-    background: url(Images/UI/bg_order.jpg);
-    
+#videoarea {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
 }
 
-background: url(Images/UI/bg_main03.jpg);
-padding: 0px;
-margin: 0px;
-overflow-x:hidden;
-font-family: 'Source Sans 3','メイリオ',Meiryo,'ＭＳ Ｐゴシック','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', 'verdana', 'Helvetica','Arial', 'sans-serif';
+#video {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 177.77777778vh;
+    height: 56.25vw;
+    min-height: 100%;
+    min-width: 100%;
 }
-
-.videobackground video {
-max-width: 100%;
-max-height: 100%;
-}
-
 
 #logo {
-width: 700px;
-float: left;
-margin-top: 150px;
-margin-left: 50px;
-position: absolute;
+    margin-left: 50px;
+    float: left;
+    transform: translate(0, 50%);
 }
 
-#sectionsplit {
-background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 20%,rgba(255,255,255,1) 80%);;
-width: 100%;
-height: 175px;
-position: absolute;
-bottom: -100;
+#logo-image {
+    width: 800px;
+    align-self: center;
+}
+
+#end-header {
+    bottom: 0;
+    border: 10px solid black;
+    padding: 10%
+}
