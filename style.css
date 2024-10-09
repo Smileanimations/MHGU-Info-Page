@@ -1,3 +1,15 @@
+:root {
+    --card-height: 280px;
+    /* Fixed card height */
+    --card-width: calc(25% - 20px);
+    /* Adjust card width with a margin */
+}
+
+* {
+    box-sizing: border-box;
+    /* Include padding and border in element's total width */
+}
+
 body {
     font-family: 'Source Sans 3','メイリオ',Meiryo,'ＭＳ Ｐゴシック','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', 'verdana', 'Helvetica','Arial', 'sans-serif';
     position: static;
@@ -60,6 +72,8 @@ body {
 
 #follow-buttons ul li {
     display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
     justify-content: center;
 }
 
