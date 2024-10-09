@@ -1,22 +1,11 @@
 body {
-    font-family: 'Source Sans 3','メイリオ',Meiryo,'ＭＳ Ｐゴシック','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', 'verdana', 'Helvetica','Arial', 'sans-serif';
+    font-family: 'Source Sans 3';
     position: static;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
 }
-
-.white-text {
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 0px 0px 5px #000, 0px 0px 5px #000, 0px 0px 5px #000, 0px 0px 5px #000, 0px 0px 5px #000, 0px 0px 5px #000;
-}
     
-.social{
-    width: 40px;
-    height: 40px;
-}
-
 #video {
     position: absolute;
     top: 50%;
@@ -42,33 +31,15 @@ body {
     margin-left: 50px;
 }
 
-#available-now {
-    font-size: 4rem;
-    top: 43%;
-    margin-right: 15%;
-    position: relative;
-    float: right;
-}
-
 #container {
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-#follow-section {
-    border: 10px solid black;
-    background-color: black;
-    text-align: center;
-}
-
-#follow-buttons ul li {
-    display: flex;
-    justify-content: center;
 }
 
 #buy-section {
-    position: absolute;
+    position: relative;
     background: url(Images/UI/bg_order.jpg) no-repeat left;
     background-size: cover;
     width: 100%;

@@ -9,24 +9,13 @@
 <body>
 <div class="container">
     <video id="video" src="Images/UI/WebsiteTrailer.mp4" autoplay="" loop="" muted=""></video>
-    <div id="logo-section"> 
-        <img src="Images/UI/Logo-MHGU.webp" alt="">
-        <h1 id="available-now" class="white-text">Available Now</h1>
-    </div>
+    <div id="logo-section"> <img src="Images/UI/Logo-MHGU.webp" alt=""></div>
 </div>
-<div id="follow-section">
-    <h3 class="white-text">Follow Us!</h3>
-    <div id="follow-buttons">
-        <ul>
-            <li><a href=""><img class="social" src="Images/UI/icon_facebook.svg" alt=""></a></li>
-            <li><a href=""><img class="social" src="Images/UI/icon_twitter.svg" alt=""></a></li>
-            <li><a href=""><img class="social" src="Images/UI/icon_instagram.svg" alt=""></a></li>
-            <li><a href=""><img class="social" src="Images/UI/icon_youtube.svg" alt=""></a></li>
-        </ul>
-    </div>
+<div>
+    
 </div>
 <div id="buy-section">
-    <div id="buy-section-">
+    <div>
         <h1>Hunt Anywhere!</h1>
         <h1>Hunt Anyway!</h1>
         <h1>Hunt Ultimate!</h1>
