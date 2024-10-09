@@ -20,8 +20,6 @@ body {
 
 #logo-section {
     bottom: 0;
-    max-width: 100%;
-    height: 100%;
 }
 
 #logo-section img {
@@ -35,13 +33,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    max-width: 100%;
 }
 
 #buy-section {
-    position: relative;
+    position: absolute;
     background: url(Images/UI/bg_order.jpg) no-repeat left;
     background-size: cover;
+    margin-top: 25%;
     width: 100%;
     height: 430;
     z-index: 0; 
