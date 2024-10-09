@@ -14,10 +14,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* Align items at the start */
     background: #191c29;
     overflow: auto;
-    /* Allow scrolling if needed */
 }
 
 .card-list {
@@ -25,11 +23,8 @@ body {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    /* Allow cards to wrap */
     justify-content: center;
-    /* Center align cards */
     max-width: 1200px;
-    /* Limit maximum width for better presentation */
 }
 
 .card {
@@ -42,15 +37,11 @@ body {
     padding: 0 36px;
     perspective: 1500px;
     margin: 20px;
-    /* Reduced margin for better spacing */
-    background: url(Images/UI/background.png) center/cover no-repeat;
     transition: transform 0.3s ease;
-    /* Add transition for scaling */
 }
 
 .card:hover {
     transform: scale(1.05);
-    /* Slightly scale on hover */
 }
 
 p {
@@ -70,12 +61,15 @@ p {
     width: 100%;
     height: 100%;
     z-index: -1;
+    background: url(Images/UI/background.png) center/cover no-repeat;
+    transform: perspective(900px);
 }
 
 .cover-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 5px;
 }
 
 .card:hover .wrapper {
@@ -125,7 +119,7 @@ p {
 }
 
 .character {
-    width: 100%;
+    height: 75%;
     opacity: 0;
     transition: all 0.5s;
     position: absolute;
