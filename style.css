@@ -1,51 +1,147 @@
+:root {
+    --card-height: 280px;
+    /* Fixed card height */
+    --card-width: calc(25% - 20px);
+    /* Adjust card width with a margin */
+}
+
+* {
+    box-sizing: border-box;
+    /* Include padding and border in element's total width */
+}
+
 body {
-    font-family: 'Source Sans 3';
-    position: static;
-    padding: 0;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
-    overflow-x: hidden;
-}
-    
-#video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vh;
-    height: 100vw;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-}
-
-#logo-section {
-    bottom: 0;
-}
-
-#logo-section img {
-    transform: translate(0,50%);
-    width: 650px;
-    z-index: 1;
-    margin-left: 50px;
-}
-
-#container {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
+    background: #191c29;
+    /* Background color for the body */
 }
 
-#buy-section {
-    position: absolute;
-    background: url(Images/UI/bg_order.jpg) no-repeat left;
-    background-size: cover;
-    margin-top: 25%;
-    width: 100%;
-    height: 430;
-    z-index: 0; 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    justify-content: center;
+    /* Center items horizontally */
+    gap: 20px;
+    /* Space between cards */
+    max-width: 1200px;
+    /* Max width for the container */
 }
 
-#buy-section-text{
+.card {
+    width: var(--card-width);
+    /* Use CSS variable for width */
+    height: var(--card-height);
+    /* Use CSS variable for height */
+    position: relative;
+    /* For absolute positioning of inner elements */
+    display: flex;
+    flex-direction: column;
+    /* Align children in a column */
+    justify-content: flex-end;
+    /* Align children to the bottom */
+    align-items: center;
+    /* Center items horizontally */
+    perspective: 1500px;
+    /* Perspective for 3D effects */
+    background-color: #2a2e3b;
+    /* Optional: card background for contrast */
+    border-radius: 8px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Clip content that overflows */
+    transition: transform 0.3s;
+    /* Add transition for hover effects */
+}
+
+/* Add hover effect for the card */
+.card:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+}
+
+p {
+    font-variant: small-caps;
+    /* Small caps font variant */
+    color: aliceblue;
+    /* Text color */
+    font-size: 20px;
+    /* Font size */
     text-align: center;
+    /* Center align text */
+    animation: glow 1s ease-in-out infinite alternate;
+    /* Glow animation */
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #171717;
+    /* Text shadow for glowing effect */
+    margin: 10px 0;
+    /* Margin around the text */
+}
+
+.wrapper {
+    position: relative;
+    /* For positioning child elements */
+    width: 100%;
+    /* Full width */
+    height: calc(100% - 40px);
+    /* Adjust height to leave space for text */
+    overflow: hidden;
+    /* Clip overflow */
+}
+
+.cover-image {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    /* Cover the container without distortion */
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+.character {
+    position: absolute;
+    /* Position relative to .wrapper */
+    bottom: 0;
+    /* Position at the bottom */
+    width: 100%;
+    /* Full width */
+    opacity: 0;
+    /* Start hidden */
+    transition: all 0.5s;
+    /* Smooth transition for opacity and movement */
+}
+
+.card:hover .character {
+    opacity: 1;
+    /* Show character image on hover */
+    transform: translateY(-20px);
+    /* Move character up */
+}
+
+/* Optional: Animation for glow effect */
+@keyframes glow {
+    0% {
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 30px #171717;
+        /* Initial glow */
+    }
+
+    100% {
+        text-shadow:
+            0 0 20px #ff0000,
+            0 0 30px #ff0000,
+            0 0 40px #171717;
+        /* Final glow effect */
+    }
 }
