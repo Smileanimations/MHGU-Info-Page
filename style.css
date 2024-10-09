@@ -6,73 +6,22 @@ body {
     overflow-x: hidden;
 }
     
-
-.img {
-    /* Size Constraints */
-    width: 270px;
-    height: auto;
-    max-width: 95%;
-    max-height: 200px;
-    margin: 2em;
-    padding: 20px 28px;
-
-    /* Background Styling */
-    background: url(Images/UI/background.png) center/cover no-repeat;
-    background-color: blue;
-    /* Fallback color if the image is not available */
-
-    /* Border Radius */
-    border-radius: 5px;
-
-    /* Box Shadow for Depth */
-    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.5), 4px 4px 25px rgba(62, 61, 61, 0.76);
-
-    /* Flexbox for Centering Content */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    /* Grid for Layout */
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 180px 1fr auto;
-
-    /* Interaction */
-    cursor: pointer;
-    transition: max-width 0.4s ease-in-out, max-height 0.4s ease-in-out;
-    z-index: 2;
-    font-weight: bolder;
-}
-
-#video-area {
-    position: static;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-
 #video {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 177.78vh; 
+    width: 100vh;
     height: 100vw;
     min-width: 100%;
     min-height: 100%;
-}
-
-#logo-section {
-    padding-bottom: 20%;
+    z-index: 0;
 }
 
 #logo-image {
     transform: translate(0,50%);
     width: 750px;
+    z-index: 1;
 }
 
 #section-footer {
@@ -80,6 +29,7 @@ body {
     background-color: black;
     position: relative;
     height: 104px;
+    z-index: 1;
 }
 
 #buy-section {
@@ -88,7 +38,7 @@ body {
     background-size: cover;
     width: 100%;
     height: 430;
-    z-index: 1; 
+    z-index: 0; 
 }
 
 #buy-section-text{
