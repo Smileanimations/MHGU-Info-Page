@@ -10,6 +10,14 @@ CREATE TABLE `weapons` (
     info VARCHAR(500)
 );
 
+CREATE TABLE `hunter arts` (
+    id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    info VARCHAR(500),
+    weapon MEDIUMINT,
+    FOREIGN KEY (weapon) REFERENCES `weapons`(id)
+);
+
 CREATE TABLE `monsters` (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
