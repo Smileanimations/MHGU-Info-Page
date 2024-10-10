@@ -1,13 +1,23 @@
-DROP DATABASE IF EXISTS `MGU`;
+DROP DATABASE IF EXISTS `MHGU`;
 
-CREATE DATABASE `MGU`;
+CREATE DATABASE `MHGU`;
 
-USE `MGU`;
+USE `MHGU`;
 
 CREATE TABLE `weapons` (
     id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
     info VARCHAR(500)
+);
+
+CREATE TABLE `monsters` (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    type VARCHAR(50) NOT NULL,
+    deviant BOOLEAN NOT NULL,
+    small_monster BOOLEAN NOT NULL,
+    related_monsters VARCHAR(50),
+    description text
 );
 
 INSERT INTO `weapons`(name, info) VALUES
