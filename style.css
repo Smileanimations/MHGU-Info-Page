@@ -81,12 +81,11 @@ body {
     text-align: center;
 }
 
-
-  .topnav #myLinks {
+  .burger #myLinks {
     display: none;
   }
   
-  .topnav a {
+  .burger a {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
@@ -94,14 +93,13 @@ body {
     display: block;
   }
 
-  .topnav a.icon {
+  .burger a.icon {
     display: block;
     position: absolute;
     right: 0;
     top: 0;
   }
 
-  .topnav a:hover {
-    background-color: #ddd;
+  .burger a:hover {
     color: black;
   }
