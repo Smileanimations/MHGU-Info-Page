@@ -82,11 +82,11 @@ body {
 }
 
 /* Style the navigation menu */
-.topnav {
+/* .topnav {
     overflow: hidden;
     background-color: #333;
     position: relative;
-  }
+  } */
   
   /* Hide the links inside the navigation menu (except for logo/home) */
   .topnav #myLinks {
@@ -104,7 +104,6 @@ body {
   
   /* Style the hamburger menu */
   .topnav a.icon {
-    background: black;
     display: block;
     position: absolute;
     right: 0;
@@ -118,7 +117,7 @@ body {
   }
   
   /* Style the active link (or home/logo) */
-  .active {
+  /* .active {
     background-color: #04AA6D;
     color: white;
-  }
+  } */
