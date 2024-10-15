@@ -23,10 +23,10 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
         if ($monster['small_monster'] == 1) {?>
         <div class="card">
             <div class="wrapper">
-                <img src="Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" class="cover-image" alt="Bow Cover" />
+                <img src="../Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" class="cover-image" alt="<?=$monster['name']?>" />
             </div>
             <div class="title"><?=$monster['name'];?></div>
-            <img src="Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" />
+            <img src="../Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" />
         </div>
     <?php }}?>
     </div>
@@ -40,10 +40,10 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
             if ($monster['small_monster'] == 0) {?>
             <div class="card">
                 <div class="wrapper">
-                    <img src="Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" class="cover-image" alt="Bow Cover" />
+                    <img src="../Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" class="cover-image" alt="Bow Cover" />
                 </div>
                 <div class="title"><?=$monster['name'];?></div>
-                <img src="Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" />
+                <img src="../Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" />
             </div>
             <?php }}?>
             </div>
