@@ -11,20 +11,8 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     background: #191c29;
     overflow: auto;
-}
-
-.card-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px;
 }
 
 .card {
@@ -39,6 +27,29 @@ body {
     margin: 20px;
     transition: transform 0.3s ease;
 }
+
+.card-list,
+.card-list1 {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.card-list .card,
+.card-list1 .card {
+    height: var(--card-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    perspective: 1500px;
+    transition: transform 0.3s ease;
+}
+
 
 .card:hover {
     transform: scale(1.05);
@@ -66,8 +77,8 @@ p {
 }
 
 .cover-image {
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
     object-fit: contain;
     position: fixed;
     padding: 5px;
@@ -75,7 +86,6 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 
 .card:hover .wrapper {
     transform: perspective(900px) translateY(-5%) rotateX(25deg);
@@ -114,17 +124,31 @@ p {
     height: 120px;
 }
 
-.title {
+.card .title {
+    position: absolute;
+    bottom: 10px;
     width: 100%;
-    transition: transform 0.5s;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: transform 0.3s ease;
+    font-variant: small-caps;
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px #050505, 0 0 20px #fff, 0 0 30px #171717, 0 0 30px #111111, 0 0 40px #141414, 0 0 50px #131313, 0 0 60px #171717;
 }
 
 .card:hover .title {
     transform: translate3d(0%, -50px, 100px);
 }
 
+
 .character {
-    height: 75%;
+    height: 60%;
     opacity: 0;
     transition: all 0.5s;
     position: absolute;
