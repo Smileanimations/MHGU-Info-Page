@@ -13,7 +13,7 @@ Our project includes a DB and runs on the local host. Displaying monster with vi
 - info on weapons
 
 ### How to install
-1. clone repo
+1. clone repo(https://github.com/Smileanimations/MHGU-Website-Remake.git)
 2. run data.sql
 3. run website on local host
 
