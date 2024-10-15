@@ -28,6 +28,7 @@ img {
     <title>Document</title>
 </head>
 <body>
+<a href="index.html">&crarr;Back</a>
     <?php foreach ($monsters as $index => $monster) {
         ?>
         <div style="border: 10px solid black; position: relative">
