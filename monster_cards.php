@@ -16,36 +16,37 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-    <h1>Small Monsters</h1>
-    <ul class="card-list">
-        <li>
-        <?php foreach ($monsters as $index => $monster) {
-            if ($monster['small_monster'] == 1) {?>
-            <div class="card">
-                <div class="wrapper">
-                    <img src="Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" class="cover-image" alt="Bow Cover" />
-                </div>
-                <p><?=$monster['name'];?></p>
-                <img src="Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" />
+
+    <h1 class="title1">Small Monsters</h1>
+    <div class="card-list">
+    <?php foreach ($monsters as $index => $monster) {
+        if ($monster['small_monster'] == 1) {?>
+        <div class="card">
+            <div class="wrapper">
+                <img src="Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" class="cover-image" alt="Bow Cover" />
             </div>
-            <?php }}?>
-        </li>
-    </ul>
-    <h1>Large Monsters</h1>
-    <ul class="card-list">
-        <li>
+            <div class="title"><?=$monster['name'];?></div>
+            <img src="Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" />
+        </div>
+    <?php }}?>
+    </div>
+
+    
+    
+    <h1 class="title1">Large Monsters</h1>
+    <div class="card-list1">
+
         <?php foreach ($monsters as $index => $monster) {
             if ($monster['small_monster'] == 0) {?>
             <div class="card">
                 <div class="wrapper">
                     <img src="Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" class="cover-image" alt="Bow Cover" />
                 </div>
-                <p><?=$monster['name'];?></p>
+                <div class="title"><?=$monster['name'];?></div>
                 <img src="Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" />
             </div>
             <?php }}?>
-        </li>
-    </ul>
+            </div>
 </body>
 
 </html>
