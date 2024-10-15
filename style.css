@@ -171,3 +171,7 @@ body {
 .menu__item:hover {
     background-color: #CFD8DC;
 }
+
+.hover-icon {
+    width: 45px;
+}
