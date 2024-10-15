@@ -1,5 +1,5 @@
 <?php
-include_once("connection.php");
+include("../connection.php");
 
 $query = $conn->query("SELECT * FROM `monsters`");
 $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
