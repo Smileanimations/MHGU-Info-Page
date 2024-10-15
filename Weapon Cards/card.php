@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <a href="index.html">&crarr;Back</a>
+    <a href="../index.html">&crarr;Back</a>
     <ul class="card-list">
         <li>
             <div class="card">
