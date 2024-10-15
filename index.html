@@ -1,3 +1,14 @@
+<script>
+    function myFunction() {
+    var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+  }
+}
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,28 +19,28 @@
 </head>
 <body>
 <video id="video" src="Images/UI/WebsiteTrailer.mp4" autoplay="" loop="" muted=""></video>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="#">WIP</a></li>
+      <li><a class="menu__item" href="#">WIP</a></li>
+      <li><a class="menu__item" href="#">WIP</a></li>
+    </ul>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  </a>
+  </div>
+  <div id="logo-section">
+    <img src="Images/UI/Logo-MHGU.webp" alt="">
+  </div>
 <div id="logo-section"> 
     <img src="Images/UI/Logo-MHGU.webp" alt="">
-    <h1 id="available-now" class="white-text">Available Now</h1>
-</div>
-<div>
-<div id="follow-section">
-    <h3 class="white-text">Follow Us!</h3>
-    <div id="follow-buttons">
-        <ul>
-            <li><a href=""><img class="social" src="Images/UI/icon_facebook.svg" alt=""></a></li>
-            <li><a href=""><img class="social" src="Images/UI/icon_twitter.svg" alt=""></a></li>
-            <li><a href=""><img class="social" src="Images/UI/icon_instagram.svg" alt=""></a></li>
-            <li><a href=""><img class="social" src="Images/UI/icon_youtube.svg" alt=""></a></li>
-        </ul>
-    </div>
-</div>    
-<div id="buy-section">
-    <div>
-        <h1>Hunt Anywhere!</h1>
-        <h1>Hunt Anyway!</h1>
-        <h1>Hunt Ultimate!</h1>
-    </div>
 </div>
 </body>
 </html>
