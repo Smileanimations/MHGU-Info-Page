@@ -83,7 +83,7 @@ h1 {
     width: 70%;
     height: 70%;
     object-fit: contain;
-    position: fixed;
+    position: absolute;
     padding: 5px;
     top: 50%;
     left: 50%;
@@ -157,9 +157,16 @@ h1 {
     position: absolute;
     bottom: 0;
     z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .card:hover .character {
     opacity: 1;
-    transform: translate3d(0%, -30%, 100px);
+    transform: translate(-50%, -30%);
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
 }
