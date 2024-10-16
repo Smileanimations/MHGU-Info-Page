@@ -17,6 +17,9 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
 
 <body>
 <a href="../index.html">&crarr;Back</a>
+<div class="topnav">
+  <input type="text" id="input" placeholder="Search...">
+</div>
     <h1 class="title1">Small Monsters</h1>
     <div class="card-list">
     <?php foreach ($monsters as $index => $monster) {
