@@ -46,7 +46,7 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
                 <img src="../Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" />
             </div>
             <?php }}?>
-            </div>
+    </div>
 </body>
 
 </html>
