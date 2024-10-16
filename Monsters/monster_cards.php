@@ -42,7 +42,7 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
                     <img src="../Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" onerror="this.onerror=null; this.src='../Images/Monster Icons/Default_Icon.webp';" class="cover-image" alt="Bow Cover" />
                 </div>
                 <div class="title"><?=$monster['name'];?></div>
-                <a href=""><img src="../Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" /></a>
+                <a href="test"><img src="../Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" /></a>
             </div>
             <?php }}?>
     </div>
