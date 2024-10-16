@@ -32,7 +32,7 @@ img {
     <?php foreach ($monsters as $index => $monster) {
         ?>
         <div style="border: 10px solid black; position: relative">
-            <img src="Images/Monster Icons/<?= str_replace(" ", "_", $monster['name'])?>_Icon.webp" onerror="this.onerror=null; this.src='Images/Monster Icons/Default_Icon.webp';" alt=<?= $monster['name'];?>>
+            <img src="Images/Monster Icons/<?= str_replace(" ", "_", $monster['name'])?>_Icon.webp" onerror="this.onerror=null; this.src='../Images/Monster Icons/Default_Icon.webp';" alt=<?= $monster['name'];?>>
             <h2 style="color:<?php if ($monster['deviant'] == 1){echo "red";} elseif ($monster['type'] == "Elder Dragon"){echo $green;}?>"><?=$monster['name'];?></h2>
             <h3><?=$monster['type'];?></h3>
             <p><?= $monster['description'];?></p>
