@@ -16,6 +16,7 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
+
 <a href="../index.html">&crarr;Back</a>
 <div class="topnav">
   <input type="text" id="input" placeholder="Search...">
@@ -29,13 +30,11 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
                 <img src="../Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" onerror="this.onerror=null; this.src='../Images/Monster Icons/Default_Icon.webp';" class="cover-image" alt="<?=$monster['name']?>" />
             </div>
             <div class="title"><?=$monster['name'];?></div>
-            <img src="../Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" />
+            <a href="monsters.php?<?= $monster['id']?>"><img src="../Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" /></a>
         </div>
     <?php }}?>
     </div>
 
-    
-    
     <h1 class="title1">Large Monsters</h1>
     <div class="card-list1">
 
@@ -46,7 +45,7 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
                     <img src="../Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" onerror="this.onerror=null; this.src='../Images/Monster Icons/Default_Icon.webp';" class="cover-image" alt="Bow Cover" />
                 </div>
                 <div class="title"><?=$monster['name'];?></div>
-                <img src="../Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" />
+                <a href="monsters.php?<?= $monster['id']?>"><img src="../Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" /></a>
             </div>
             <?php }}?>
     </div>
