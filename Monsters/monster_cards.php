@@ -31,8 +31,6 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
     <?php }}?>
     </div>
 
-    
-    
     <h1 class="title1">Large Monsters</h1>
     <div class="card-list1">
 
