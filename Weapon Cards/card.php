@@ -18,7 +18,6 @@ $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <a href="../index.html">&crarr;Back</a>
     <ul class="card-list">
-        <li>
         <?php foreach ($weapons as $index => $weapon) { ?>
             <div class="card">
                 <div class="wrapper">
@@ -28,7 +27,6 @@ $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
                 <img src="../Images/Weapons/<?= $weapon['name']?>.webp" class="character" alt="Bow Character" />
             </div>
         <?php }?>
-        </li>
     </ul>
 </body>
 
