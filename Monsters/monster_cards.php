@@ -1,5 +1,6 @@
 <?php
 include("../connection.php");
+include_once("../nav.html");
 
 $query = $conn->query("SELECT * FROM `monsters`");
 $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -16,7 +17,6 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-<a href="../index.html">&crarr;Back</a>
 <div class="topnav">
   <form method="POST" action="monster_cards.php" type="text" id="input" placeholder="Search..."></form>
 </div>
