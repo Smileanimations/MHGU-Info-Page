@@ -1,5 +1,6 @@
 <?php
 include_once("../connection.php");
+include_once("../nav.html");
 
 $query = $conn->query("SELECT * FROM `weapons`");
 $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -16,7 +17,6 @@ $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-    <a href="../index.html">&crarr;Back</a>
     <ul class="card-list">
         <?php foreach ($weapons as $index => $weapon) { ?>
             <div class="card">
