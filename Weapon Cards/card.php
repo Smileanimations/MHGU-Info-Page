@@ -21,10 +21,10 @@ $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
         <?php foreach ($weapons as $index => $weapon) { ?>
             <div class="card">
                 <div class="wrapper">
-                    <img src="../Images/Weapons/Weapon Renders/<?= $weapon['name']?>.webp" class="cover-image" alt="Bow Cover" />
+                    <img src="../Images/Weapons/Weapon Renders/<?= $weapon['name']?>.webp" class="cover-image" alt="Bow Cover"/>
                 </div>
                 <p><?= $weapon['name']?></p>
-                <img src="../Images/Weapons/<?= $weapon['name']?>.webp" class="character" alt="Bow Character" />
+                <a href="weapons.php?<?= $weapon['id']?>"><img src="../Images/Weapons/<?= $weapon['name']?>.webp" class="character" alt="Bow Character"/></a>
             </div>
         <?php }?>
     </ul>
