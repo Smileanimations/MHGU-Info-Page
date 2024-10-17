@@ -1,5 +1,6 @@
 <?php
 include_once("../connection.php");
+include_once("../nav.html");
 
 $icon;
 $query = $conn->query("SELECT * FROM weapons WHERE id=" . $_GET['id']);
@@ -22,7 +23,6 @@ $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
     </style>
 </head>
 <body>
-<a href="card.php">&crarr;Back</a>
 <ul class="card-list">
     <?php foreach ($weapons as $index => $weapon) { ?>
         <h1><?= $weapon["name"] ?></h1>
