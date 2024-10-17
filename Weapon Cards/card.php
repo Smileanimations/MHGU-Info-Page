@@ -24,7 +24,7 @@ $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
                     <img src="../Images/Weapons/Weapon Renders/<?= $weapon['name']?>.webp" class="cover-image" alt="Bow Cover"/>
                 </div>
                 <p><?= $weapon['name']?></p>
-                <a href="weapons.php?<?= $weapon['id']?>"><img src="../Images/Weapons/<?= $weapon['name']?>.webp" class="character" alt="Bow Character"/></a>
+                <a href="weapons.php?id=<?= $weapon['id']?>"><img src="../Images/Weapons/<?= $weapon['name']?>.webp" class="character" alt="Bow Character"/></a>
             </div>
         <?php }?>
     </ul>
