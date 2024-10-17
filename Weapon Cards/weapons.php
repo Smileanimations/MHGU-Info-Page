@@ -2,10 +2,8 @@
 include_once("../connection.php");
 
 $icon;
-$query = $conn->query("SELECT * FROM weapons WHERE id=$id");
+$query = $conn->query("SELECT * FROM weapons WHERE id=" . $_GET['id']);
 $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
-
-$id = $_GET["id"] ?? "asc";
 
 ?>
 
