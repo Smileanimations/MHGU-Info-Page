@@ -18,6 +18,7 @@ $green = "green"
     <title>Weapons</title>
 </head>
 <body>
-    
+<a href="card.php">&crarr;Back</a>
+
 </body>
 </html>
