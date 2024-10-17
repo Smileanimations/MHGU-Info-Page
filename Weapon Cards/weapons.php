@@ -1,33 +1,28 @@
 <?php
 include_once("../connection.php");
 
+$icon;
 $query = $conn->query("SELECT * FROM `weapons`");
 $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Card</title>
-    <link rel="stylesheet" href="card.css">
+    <title>Weapon details</title>
 </head>
-
 <body>
-    <a href="../index.html">&crarr;Back</a>
+    <a href="card.php">&crarr;Back</a>
     <ul class="card-list">
         <?php foreach ($weapons as $index => $weapon) { ?>
             <div class="card">
                 <div class="wrapper">
-                    <img src="../Images/Weapons/Weapon Renders/<?= $weapon['name']?>.webp" class="cover-image" alt="Bow Cover"/>
+                    <img src="../Images/Weapons/Weapon Renders/<?= $weapon['name']?>.webp" onerror="this.onerror=null; this.src='../Images/Monster Icons/Default_Icon.webp';" class="cover-image" alt="<?=$weapon['name']?>" />
                 </div>
-                <p><?= $weapon['name']?></p>
-                <a href="weapons.php?<?= $weapon['id']?>"><img src="../Images/Weapons/<?= $weapon['name']?>.webp" class="character" alt="Bow Character"/></a>
             </div>
         <?php }?>
     </ul>
 </body>
-
 </html>
