@@ -18,12 +18,13 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
 <a href="monster_cards.php">&crarr;Back</a>
     <?php foreach ($monsters as $index => $monster) { ?>
         <div class="title">
-        <img src="../Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" onerror="this.onerror=null; this.src='../Images/Monster Icons/Default_Icon.webp';" class="cover-image" alt="<?=$monster['name']?>" />
-        <div class="ragingbrachy">
-            <h1><?=$monster['name']?></h1>
-            <h3><?=$monster['type']?></h3>
+            <img src="../Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" onerror="this.onerror=null; this.src='../Images/Monster Icons/Default_Icon.webp';" class="cover-image" alt="<?=$monster['name']?>" />
+            <div class="header">
+                <h1><?=$monster['name']?></h1>
+                <h3><?=$monster['type']?></h3>
+            </div>
         </div>
-        </div>
+        
     <?php }?>
 </body>
 </html>
