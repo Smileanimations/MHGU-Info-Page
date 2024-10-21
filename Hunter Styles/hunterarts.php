@@ -3,7 +3,7 @@ include_once("../connection.php");
 include_once("../nav.html");
 
 $query = $conn->query("SELECT * FROM `hunter arts`");
-$weapons = $query->fetchAll(PDO::FETCH_ASSOC);
+$arts = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +14,8 @@ $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
     <title>Hunter Arts</title>
 </head>
 <body>
-    <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod optio sed iste facilis libero, non odit necessitatibus? Neque repellendus esse expedita sapiente voluptates voluptate voluptas deserunt maiores nostrum perspiciatis? Sequi!</a>
+<?php foreach ($arts as $index => $art) { ?>
+    <h1><?= $art["name"] ?></h1>
+<?php }?>
 </body>
 </html>
