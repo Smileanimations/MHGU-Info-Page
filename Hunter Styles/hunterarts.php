@@ -15,11 +15,6 @@ $arts = $query->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- <div>
-        <?php foreach ($arts as $index => $art) { ?>
-            <h1><?= $art["name"] ?></h1>
-        <?php }?>
-    </div> -->
     <h1 class="title" style="color: black;">Hunter Arts</h1>
     <div>
       <table>
@@ -28,7 +23,7 @@ $arts = $query->fetchAll(PDO::FETCH_ASSOC);
             <th>Visual</th>
             <th>Name</th>
             <th>Description</th>
-            <!-- <th>Details</th> -->
+            <th>Details</th>
           </tr>
         </thead>
         <?php foreach ($arts as $index => $art) { ?>
@@ -36,7 +31,7 @@ $arts = $query->fetchAll(PDO::FETCH_ASSOC);
             <td><img src="../Images/Weapons/Arts/<?php echo $art['name']?>.png" alt="" class="icons"></td>
             <td><?= $art["name"] ?></td>
             <td><?= $art["info"] ?></td>
-            <!-- <td><a href="details.php?id=<?= $art["id"] ?>">View details</a></td> -->
+            <td><a href="details.php?id=<?= $art["weapon"] ?>">View details</a></td>
           </tr>
         <?php } ?>
       </table>
