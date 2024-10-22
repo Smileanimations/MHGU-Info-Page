@@ -1,33 +1,25 @@
 h1 {
     text-align: center;
-    color: black;
+    color: rgb(197, 196, 196) !important;
 }
 
 td, th {
     text-align: center;
-    color: grey !important;
+    color: rgb(197, 196, 196) !important;
     border: 1px solid #111828;
     padding: 8px;
 }
 
 body {
-    background-image: url();
-    background-size: cover;
-    min-height: 750px;
-}
-
-label {
-    text-align: center;
-    color: white;
-    font-size: larger;
+    background: #191c29;
 }
 
 table {
     font-family: arial, sans-serif;
-    width: 25%;
+    width: 50%;
     background-color: #202938;
     margin-bottom: auto;
     margin-right: auto;
     margin-left: auto;
-    font-size: small;
+    font-size: medium;
 }
