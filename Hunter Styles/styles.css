@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+    color: black;
+}
+
+td, th {
+    text-align: center;
+    color: grey !important;
+    border: 1px solid #111828;
+    padding: 8px;
+}
+
+body {
+    background-image: url();
+    background-size: cover;
+    min-height: 750px;
+}
+
+label {
+    text-align: center;
+    color: white;
+    font-size: larger;
+}
+
+table {
+    font-family: arial, sans-serif;
+    width: 25%;
+    background-color: #202938;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: small;
+}
