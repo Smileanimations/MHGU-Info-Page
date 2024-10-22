@@ -14,8 +14,10 @@ $arts = $query->fetchAll(PDO::FETCH_ASSOC);
     <title>Hunter Arts</title>
 </head>
 <body>
-<?php foreach ($arts as $index => $art) { ?>
-    <h1><?= $art["name"] ?></h1>
-<?php }?>
+    <div>
+        <?php foreach ($arts as $index => $art) { ?>
+            <h1><?= $art["name"] ?></h1>
+        <?php }?>
+    </div>
 </body>
 </html>
