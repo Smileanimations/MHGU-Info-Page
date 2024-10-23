@@ -11,7 +11,7 @@ DROP TABLE IF EXISTS monsters;
 CREATE TABLE monsters (
     id INT PRIMARY KEY,
     monster VARCHAR(255) NOT NULL,
-    size_range VARCHAR(50) NOT NULL
+    SIZE_CM VARCHAR(50) NOT NULL
 );
 
 -- Insert data into the monsters table
