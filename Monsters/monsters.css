@@ -33,3 +33,27 @@ h3 {
 .header {
     padding-left: 30px;
 }
+
+.index {
+    display: flex;
+
+}
+
+.render {
+    padding: 2%;
+    padding-right: 2%;
+    min-width: auto;
+    max-width: 600px;
+    min-height: 400px;
+    max-height: 500px;
+}
+
+.loser {
+    padding-left: 50px;
+}
+
+.description {
+    color: white;
+    font-size: x-large;
+
+}

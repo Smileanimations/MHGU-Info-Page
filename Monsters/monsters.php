@@ -24,7 +24,12 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
                 <h3><?=$monster['type']?></h3>
             </div>
         </div>
-        
+        <div class="index">
+            <img src="../Images/Monster Renders/<?= str_replace(" ", "_", $monster['name'])?>_Render.webp" alt="" class="render">
+            <div class="loser">
+                <i class="description">"<?= $monster['description']?>"</i>
+            </div>
+        </div>
     <?php }?>
 </body>
 </html>
