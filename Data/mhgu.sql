@@ -37,8 +37,7 @@ CREATE TABLE `monster_locales` (
     monster_id INT,
     locale_id INT,
     FOREIGN KEY (monster_id) REFERENCES monsters(id),
-    FOREIGN KEY (locale_id) REFERENCES locales(id),
-    PRIMARY KEY (monster_id, locale_id)
+    FOREIGN KEY (locale_id) REFERENCES locales(id)
 );
 
 INSERT INTO `weapons`(name, info) VALUES
@@ -138,7 +137,7 @@ INSERT INTO `locales` (name) VALUES
 ('Forlorn Citadel'),
 ('Fortress'),
 ('Frozen Seaway'),
-('Ingles Isle'),
+('Ingle Isle'),
 ('Jungle'),
 ('Jurassic Frontier'),
 ('Marshlands'),
@@ -382,7 +381,7 @@ INSERT INTO `monster_locales` (monster_id, locale_id) VALUES
 (90, 12), (90, 26), (90, 23), (90, 20), (90, 1), (90, 18), (90, 21), (90, 11), (90, 13),
 (91, 26), (91, 23), (91, 6), (91, 1), (91, 25), (91, 13), (91, 14), (91, 19),
 (92, 24), (92, 26), (92, 6), (92, 1), (92, 25), (92, 13), (92, 11), (92, 23), (92, 19), (92, 21),
-(93, 23), (93, 15), (93, 13), (93, 24), (93, 19)
+(93, 23), (93, 15), (93, 13), (93, 24), (93, 19),
 (94, 12), (94, 5), (94, 23), (94, 6), (94, 15), (94, 1), (94, 18), (94, 7), (94, 13), (94, 24), (94, 14), (94, 19),
 (95, 12), (95, 5), (95, 23), (95, 15), (95, 1), (95, 21), (95, 7), (95, 13), (95, 24), (95, 14), (95, 19),
 (96, 12), (96, 23), (96, 15), (96, 13), (96, 19),

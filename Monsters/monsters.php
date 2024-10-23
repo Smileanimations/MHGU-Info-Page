@@ -33,11 +33,11 @@ $locales = $query->fetchAll(PDO::FETCH_ASSOC);
                 <i class="description">"<?= $monster['description']?>"</i>
             </div>
         </div>
-        <div>
+        <div class="localeparent">
             <?php foreach ($locales as $index => $locale) {?>
-                <div>
+                <div class="localediv">
                     <h2><?=$locale['locale']?></h2>
-                    <img src="../Images/Locale Maps/<?= str_replace(" ", "_", $locale['locale'])?>" alt="">
+                    <img src="../Images/Locale Maps/<?= str_replace(" ", "_", $locale['locale'])?>" alt="" class="locales">
                 </div>
             <?php }?>
         </div>
