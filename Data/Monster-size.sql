@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS monsters;
 -- Create the table
 CREATE TABLE monsters (
     id INT PRIMARY KEY,
-    monster VARCHAR(255) NOT NULL,
+    MONSTER VARCHAR(255) NOT NULL,
     SIZE_CM VARCHAR(50) NOT NULL
 );
 
