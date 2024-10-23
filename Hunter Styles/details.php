@@ -20,7 +20,7 @@ $arts = $query->fetchAll(PDO::FETCH_ASSOC);
 <?php foreach ($arts as $index => $art) { ?>
         <h1><?= $art["name"] ?></h1>
         <br>
-        <p><img src="../Images/Wapons/Arts<?php echo $art['name']?>.png" alt="profile" class="image"></p>
+        <p><img src="../Images/Weapons/Arts<?php echo $art['name']?>.gif" alt="profile" class="image"></p>
         <br>
     <?php } ?>
         <table>
