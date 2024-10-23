@@ -35,7 +35,10 @@ $locales = $query->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <div>
             <?php foreach ($locales as $index => $locale) {?>
-                <img src="../Images/Locale Maps/<?= str_replace(" ", "_", $locale['locale'])_" alt="">
+                <div>
+                    <h2><?=$locale['locale']?></h2>
+                    <img src="../Images/Locale Maps/<?= str_replace(" ", "_", $locale['locale'])?>" alt="">
+                </div>
             <?php }?>
         </div>
     <?php }?>
