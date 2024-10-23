@@ -39,7 +39,8 @@ if (is_null($var) == true) {
               print $art["name"]; } ?></td>
             <td><?php if (is_null($art['weapon']) == true) {
               print $art["info"]; } ?></td>
-            <td><a href="details.php?id=<?= $art["weapon"] ?>">View details</a></td>
+            <td><?php if (is_null($art['weapon']) == true) {
+            ?><a href="details.php?id=<?= $art["weapon"] ?>">View details</a><?php } ?></td>
           </tr>
         <?php } ?>
       </table>
