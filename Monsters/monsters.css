@@ -13,7 +13,7 @@ h1 {
 h2 {
     font-variant: small-caps;
     color: aliceblue;
-    font-size: 50px;
+    font-size: 45px;
     text-shadow: 0 0 10px #4f4e4e, 0 0 20px #5e5d5d, 0 0 30px #171717, 0 0 30px #111111, 0 0 40px #141414, 0 0 50px #131313, 0 0 60px #171717;
     margin-bottom: 0px;
 }
@@ -44,7 +44,7 @@ h3 {
 
 .index {
     display: flex;
-
+    border-bottom: black solid 3px;
 }
 
 .render {
@@ -63,5 +63,18 @@ h3 {
 .description {
     color: white;
     font-size: x-large;
+}
 
+.locales {
+    max-height: 250px;
+    width: 250px;
+}
+
+.localeparent {
+    text-align: center;
+}
+
+.localediv {
+    display: inline-block;
+    padding: 20px;
 }
