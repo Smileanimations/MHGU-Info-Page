@@ -44,7 +44,7 @@ h3 {
 
 .index {
     display: flex;
-    border-bottom: black solid 3px;
+    border-bottom: black solid 1px;
 }
 
 .render {
@@ -56,13 +56,22 @@ h3 {
     max-height: 500px;
 }
 
-.loser {
+.descriptiondiv {
     padding-left: 50px;
+    max-height: 302px;
 }
 
 .description {
     color: white;
     font-size: x-large;
+}
+
+.relatedmonsterparent {
+    bottom: 0;
+}
+
+.relatedmonster {
+    display: inline-block;
 }
 
 .locales {

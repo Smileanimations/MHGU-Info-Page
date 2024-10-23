@@ -8,6 +8,7 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
 
 $query = $conn->query("SELECT l.name AS locale, l.id AS locale_id FROM `monsters` m JOIN monster_locales ml ON m.id = ml.monster_id JOIN locales l ON l.id = ml.locale_id WHERE m.id=" . $_GET['id']);
 $locales = $query->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -29,9 +30,18 @@ $locales = $query->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <div class="index">
             <img src="../Images/Monster Renders/<?= str_replace(" ", "_", $monster['name'])?>_Render.webp" alt="" class="render">
-            <div class="loser">
+            <div class="descriptiondiv">
                 <i class="description">"<?= $monster['description']?>"</i>
             </div>
+            <!-- <div class="relatedmonstersparent">
+            <?php 
+            $related_monsters = explode(", ", $monster['related_monsters']);
+            foreach ($related_monsters as $related_monster) {?>
+                <div class="relatedmonster">
+                    <h4><?= $related_monster?></h4>
+                </div>
+            <?php }?>
+            </div> -->
         </div>
         <div class="localeparent">
             <?php foreach ($locales as $index => $locale) {?>
