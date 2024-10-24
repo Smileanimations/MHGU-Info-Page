@@ -291,7 +291,7 @@ INSERT INTO `monsters` (name, type, deviant, small_monster, related_monsters, de
 INSERT INTO `monster_locales` (monster_id, locale_id) VALUES 
 (1, 6), (1, 26), (1, 15), (1, 1), (1, 18), (1, 10), (1, 25), (1, 7), (1, 13), (1, 19),
 (2, 2),
-(2, 5), (2, 26),
+(3, 5), (3, 26),
 (4, 1), (4, 24), (4, 14), (4, 19),
 (5, 2),
 (6, 6), (6, 15), (6, 1), (6, 18), (6, 10), (6, 25), (6, 7), (6, 13), (6, 19),
