@@ -35,7 +35,7 @@ $locales = $query->fetchAll(PDO::FETCH_ASSOC);
                 </div>
                 <div class="relatedmonsterparent">
                     <?php if (!empty($monster['related_monsters'])) {?>
-                    <h3>Related Monsters</h3>
+                    <h2>Related Monsters:</h2>
                 <?php
                 $related_monsters = explode(", ", $monster['related_monsters']);
                 foreach ($related_monsters as $related_monster) {
