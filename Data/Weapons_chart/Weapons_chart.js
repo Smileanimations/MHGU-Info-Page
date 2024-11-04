@@ -39,8 +39,9 @@ function createDonutChart(weaponClass, weaponPopularity, totalPopularity) {
 
     const svgItem = `
         <div class="svg-item">
+                <p style="text-align: center;">${weaponClass}</p>
             <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
-                <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
+                <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#191c29"></circle>
                 <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
                 <circle class="donut-segment" cx="20" cy="20" r="15.91549430918954" fill="transparent"
                     stroke-width="3.5" stroke-dasharray="${percentage} ${remainingPercentage}" stroke-dashoffset="25"></circle>
@@ -53,7 +54,6 @@ function createDonutChart(weaponClass, weaponPopularity, totalPopularity) {
                     </text>
                 </g>
             </svg>
-            <p style="text-align: center;">${weaponClass}</p>
         </div>`;
 
     return svgItem;
