@@ -12,6 +12,29 @@ h1 {
     margin-bottom: 0px;
 }
 
+#h1 {
+    font-size: 60px;
+    margin-top: 0px;
+}
+
+#type {
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+#locale {
+    font-size: 45px;
+    margin-top: 0px;
+}
+
+.h1 {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom: #EEEEEE 3px solid;
+    padding-bottom: 20px;
+}
+
 /* Container for Image and Description */
 .content-container {
     display: flex;

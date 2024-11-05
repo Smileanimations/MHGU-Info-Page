@@ -19,7 +19,7 @@ $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
     <?php if (!empty($weapons)) {
         $weapon = $weapons[0]; // Since only one weapon detail is expected based on the ID
     ?>
-        <h1><?= htmlspecialchars($weapon["name"]) ?></h1>
+        <h1 id="title"><?=$weapon['name']?></h1>
 
         <div class="index-left">
             <img src="../Images/Weapons/<?= htmlspecialchars($weapon['name']) ?>.webp"
