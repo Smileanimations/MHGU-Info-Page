@@ -1,0 +1,76 @@
+/* General Body Styling */
+body {
+    background-color: #1A2130;
+}
+
+/* Header Styling */
+h1 {
+    font-variant: small-caps;
+    color: aliceblue;
+    font-size: 60px;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px #4f4e4e, 0 0 20px #5e5d5d, 0 0 30px #171717, 0 0 30px #111111, 0 0 40px #141414, 0 0 50px #131313, 0 0 60px #171717;
+}
+
+/* Paragraph Styling */
+p {
+    font-variant: small-caps;
+    text-align: center;
+    color: #D1D5DB;
+    font-size: 25px;
+    line-height: 1.5;
+    padding: 10px 20px;
+    margin: 10px auto;
+    max-width: 70%;
+}
+
+/* Cover Image Styling */
+.cover-image {
+    display: block;
+    margin: 20px auto;
+    width: 40%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid #FFEB3B;
+}
+
+/* Description Box Styling */
+.descript {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #F9FAFB;
+    background-color: #272B3B;
+    border: 1px solid #FFEB3B;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 80%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+        padding: 8px 16px;
+    }
+
+    p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .cover-image {
+        width: 60%;
+    }
+
+    .descript {
+        font-size: 0.85rem;
+        padding: 10px;
+        max-width: 90%;
+    }
+}

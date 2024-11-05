@@ -14,13 +14,7 @@ $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weapon details</title>
-    <style>
-        h1 {text-align: center !important; color: white; font-size: 32px; background-color: #111828; width: 275px; margin: auto !important;}
-        body {background-color: #111828;}
-        p {text-align: center; color: white; font-size: larger;}
-        .cover-image {  display: block; margin-left: auto; margin-right: auto; width: 30%;}
-        .descript {text-align: left; font-size: small; border: 1px solid yellow; display: block; margin-left: auto; margin-right: auto;}
-    </style>
+    <link rel="stylesheet" href="weapons.css">
 </head>
 <body>
 <ul class="card-list">
