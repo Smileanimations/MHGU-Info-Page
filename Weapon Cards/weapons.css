@@ -31,12 +31,19 @@ h1 {
 }
 
 .cover-image {
-    padding: 2%;
-    padding-right: 2%;
-    min-width: auto;
-    max-width: 600px;
-    min-height: 400px;
-    max-height: 500px;
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    position: absolute;
+    padding: 5px;
+    top: 55%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+#title {
+    font-size: 60px;
+    margin-top: 0px;
 }
 
 /* Description Box Styling */
