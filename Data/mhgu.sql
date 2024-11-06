@@ -10,6 +10,13 @@ CREATE TABLE `weapons` (
     info VARCHAR(500)
 );
 
+CREATE TABLE weapons_chart (
+    ID INT PRIMARY KEY,
+    WEAPON_NAME VARCHAR(255),
+    WEAPON_POPULARITY INT,
+    WEAPON_CLASS VARCHAR(255)
+);
+
 CREATE TABLE `hunter arts` (
     id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
@@ -74,6 +81,23 @@ INSERT INTO `weapons`(name, info) VALUES
     ('Heavy Bowgun', 'A powerful, long range projectile weapon. The heavy weight makes mobility a chore, but the firepower makes up for it. Use Crouching Fire to rapidly chain together shots. Hit the target at critical range to maximize damage Critical range varies depending on the ammo.'),
     ('Bow', 'The Bow is a versatile weapon thanks to its variety of Shots, including the long- ranged Arc Shot and the damaging Power Shot, and allows its user to be highly mobile as they fire off coated arrows as support. Hit the target at critical range to maximize the weapons full potential. Critical range varies depending on the type of arrow or arrow coating used.'),
     ('Prowler', 'Registering a Palico as a Prowler will let you control that Palico directly! Switch between modes via the Palico Board.');
+
+INSERT INTO weapons_chart (ID, WEAPON_NAME, WEAPON_POPULARITY, WEAPON_CLASS) VALUES
+    (1, 'Great Sword', 13867, 'Melee'),
+    (2, 'Long Sword', 9800, 'Melee'),
+    (3, 'Sword and Shield', 9124, 'Melee'),
+    (4, 'Dual Blades', 10821, 'Melee'),
+    (5, 'Hammer', 3403, 'Melee'),
+    (6, 'Hunting Horn', 2178, 'Melee'),
+    (7, 'Lance', 1832, 'Melee'),
+    (8, 'Gunlance', 1362, 'Melee'),
+    (9, 'Switchaxe', 7762, 'Melee'),
+    (10, 'Charge Blade', 11187, 'Melee'),
+    (11, 'Insect Glaive', 11821, 'Melee'),
+    (12, 'Light Bowgun', 4919, 'Ranged'),
+    (13, 'Heavy Bowgun', 2058, 'Ranged'),
+    (14, 'Bow', 4076, 'Ranged'),
+    (15, 'Prowler', 5573, 'Special');
 
 
 INSERT INTO `hunter arts`(name, info, weapon) VALUES
