@@ -32,7 +32,8 @@ if (is_null($var) == true) {
             <th>Details</th>
           </tr>
         </thead>
-        <?php foreach ($arts as $index => $art) { ?>
+        <?php foreach ($arts as $index => $art) { ?> 
+          <?php if (is_null($art['weapon']) == true) { ?>
           <tr>
             <!-- <td><img src="../Images/Weapons/Arts/<?php echo $art['name']?>.png" alt="" class="icons"></td> -->
             <td><?php if (is_null($art['weapon']) == true) {
@@ -42,6 +43,7 @@ if (is_null($var) == true) {
             <td><?php if (is_null($art['weapon']) == true) {
             ?><a href="details.php?id=<?= $art["weapon"] ?>">View details</a><?php } ?></td>
           </tr>
+          <?php } ?>
         <?php } ?>
       </table>
     </div>
