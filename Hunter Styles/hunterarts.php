@@ -6,10 +6,10 @@ $query = $conn->query("SELECT * FROM `hunter arts`");
 $arts = $query->fetchAll(PDO::FETCH_ASSOC);
 
 // The following code does not echo var, because it is not NULL. If its given value is changed to NULL, it will print.
-$var = 2;
-if (is_null($var) == true) {
-  echo "thing";
-}
+// $var = 2;
+// if (is_null($var) == true) {
+//   echo "thing";
+// }
 ?>
 
 <!DOCTYPE html>
