@@ -28,6 +28,24 @@ CREATE TABLE `monsters` (
     description text
 );
 
+CREATE TABLE `hitzones` (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Body VARCHAR(50),
+    Part INT,
+    Slash INT, 
+    Impact INT, 
+    Shot INT, 
+    Fir INT, 
+    Wat INT, 
+    Thn INT, 
+    Ice INT, 
+    Dra INT, 
+    Dizzy INT, 
+    Exh INT,
+    monster_id INT,
+    FOREIGN KEY (monster_id) REFERENCES `monsters`(id)
+);
+
 CREATE TABLE `locales` (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50)
