@@ -1,0 +1,12 @@
+.locales {
+    max-height: 250px;
+    width: 250px; 
+}
+
+h2 {
+    color: rgb(197, 196, 196) !important;
+}
+
+body {
+    background: #191c29;
+}
