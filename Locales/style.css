@@ -1,12 +1,40 @@
-.locales {
-    max-height: 250px;
-    width: 250px; 
-}
-
-h2 {
-    color: rgb(197, 196, 196) !important;
-}
-
 body {
-    background: #191c29;
+    background-color: #1A2130;
+}
+
+h1,
+h2,
+h3,
+p {
+    font-variant: small-caps;
+    color: aliceblue;
+    font-size: 30px;
+    text-shadow: 0 0 10px #4f4e4e, 0 0 20px #5e5d5d, 0 0 30px #171717, 0 0 30px #111111, 0 0 40px #141414, 0 0 50px #131313, 0 0 60px #171717;
+    margin-bottom: 0px;
+}
+
+
+.localeparent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Horizontaal centreren */
+    gap: 20px;
+    /* Ruimte tussen de items */
+}
+
+.localediv {
+    text-align: center;
+    /* Zorgt ervoor dat tekst en afbeeldingen gecentreerd worden */
+}
+
+.locales {
+    display: block;
+    /* Verwijdert ongewenste ruimte onder de afbeelding */
+    max-width: 100%;
+    /* Zorgt ervoor dat de afbeelding niet breder is dan de container */
+    max-height: 250px;
+    /* Past de hoogte van de afbeelding aan */
+    margin: 0 auto;
+    /* Centreert de afbeelding horizontaal */
 }
