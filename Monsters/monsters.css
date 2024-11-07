@@ -98,4 +98,14 @@ h1, h2, h3, p {
 .localediv {
     display: inline-block;
     padding: 20px;
+    width: 300px;
+}
+
+.localediv img {
+    width: 200px;
+    max-height: 200px;
+}
+
+.localediv h2 {
+
 }
