@@ -8,6 +8,9 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
 
 $query = $conn->query("SELECT l.name AS locale, l.id AS locale_id FROM `monsters` m JOIN monster_locales ml ON m.id = ml.monster_id JOIN locales l ON l.id = ml.locale_id WHERE m.id=" . $_GET['id']);
 $locales = $query->fetchAll(PDO::FETCH_ASSOC);
+
+$query = $conn->query('SELECT body_part, slash, impact, shot, fire, water, thunder, ice, dragon, dizzy, exhaust FROM `hitzone_data` WHERE monster_id= '. $_GET['id']);
+$hitdata = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -49,13 +52,47 @@ $locales = $query->fetchAll(PDO::FETCH_ASSOC);
                 </div>
             </div>  
         </div>
-        <div class="localeparent">
-            <?php foreach ($locales as $index => $locale) {?>
-                <div class="localediv">
-                    <h2 id="locale"><?=$locale['locale']?></h2>
-                    <img src="../Images/Locale Maps/<?= str_replace(" ", "_", $locale['locale'])?>.webp" alt="" class="locales">
-                </div>
-            <?php }?>
+        <div class="bottom">
+            <div class="localeparent">
+                <?php foreach ($locales as $index => $locale) {?>
+                    <div class="localediv">
+                        <h2 id="locale"><?=$locale['locale']?></h2>
+                        <img src="../Images/Locale Maps/<?= str_replace(" ", "_", $locale['locale'])?>.webp" alt="" class="locales">
+                    </div>
+                <?php }?>
+            </div>
+            <div class="hitdataparent">
+                    <table>
+                        <tr>
+                            <th>Body Part</th>
+                            <th>Slash</th>
+                            <th>Impact</th>
+                            <th>Shot</th>
+                            <th>Fire</th>
+                            <th>Water</th>
+                            <th>Thunder</th>
+                            <th>Ice</th>
+                            <th>Dragon</th>
+                            <th>Dizzy</th>
+                            <th>Exhaust</th>
+                        </tr>
+                        <?php foreach ($hitdata as $index => $monsterdata) {?>
+                            <tr>
+                                <td><?= $monsterdata['body_part']?></td>
+                                <td><?= $monsterdata['slash']?></td>
+                                <td><?= $monsterdata['impact']?></td>
+                                <td><?= $monsterdata['shot']?></td>
+                                <td><?= $monsterdata['fire']?></td>
+                                <td><?= $monsterdata['water']?></td>
+                                <td><?= $monsterdata['thunder'] ?></td>
+                                <td><?= $monsterdata['ice']?></td>
+                                <td><?= $monsterdata['dragon']?></td>
+                                <td><?= $monsterdata['dizzy']?></td>
+                                <td><?= $monsterdata['exhaust']?></td>
+                            </tr>
+                        <?php }?>
+                    </table>
+            </div>
         </div>
     <?php }?>
 </body>

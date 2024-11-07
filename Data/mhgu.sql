@@ -37,7 +37,7 @@ CREATE TABLE `monsters` (
 
 CREATE TABLE `hitzone_data` (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    monster_id INT NOT ,
+    monster_id INT,
     body_part VARCHAR(50),
     slash INT,
     impact INT,
