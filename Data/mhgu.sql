@@ -33,13 +33,37 @@ CREATE TABLE `monsters` (
     small_monster BOOLEAN NOT NULL,
     related_monsters VARCHAR(100),
     description text
+);
 
 CREATE TABLE `hitzone_data` (
-    id INT NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     monster_id INT,
-    hitzone_name VARCHAR(50),
+    body_part VARCHAR(50),
+    slash MEDIUMINT,
+    impact MEDIUMINT,
+    shot MEDIUMINT,
+    fire MEDIUMINT,
+    water MEDIUMINT,
+    thunder MEDIUMINT,
+    ice MEDIUMINT,
+    dragon MEDIUMINT,
+    dizzy MEDIUMINT,
+    exhaust MEDIUMINT,
     FOREIGN KEY (monster_id) REFERENCES `monsters`(id)
 );
+
+CREATE TABLE `locales` (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+CREATE TABLE `monster_locales` (
+    monster_id INT,
+    locale_id INT,
+    FOREIGN KEY (monster_id) REFERENCES monsters(id),
+    FOREIGN KEY (locale_id) REFERENCES locales(id)
+);
+
 
 INSERT INTO 'hitzone_data' (monster_id, body_part, slash, impact, shot, fire, water, thunder, ice, dragon, dizzy, exhaust) VALUES
     (37, 'Head', 20, 20, 15, 10, 30, 15, 25, 0, 100, 100),
@@ -50,7 +74,8 @@ INSERT INTO 'hitzone_data' (monster_id, body_part, slash, impact, shot, fire, wa
     (37, 'Forelegs', 15, 15, 15, 10, 20, 0, 20, 0, 0, 100),
     (37, 'Hind Legs', 20, 20, 15, 10, 20, 5, 15, 0, 0, 100),
     (37, 'Tail', 20, 24, 20, 5, 15, 10, 10, 20, 0, 100),
-    
+
+        
     (38, 'Head', 50, 50, 60, 0, 5, 20, 0, 20, 100, 100),
     (38, 'Neck', 35, 30, 20, 0, 5, 15, 0, 20, 0, 100),
     (38, 'Stomach', 35, 40, 25, 0, 5, 15, 0, 15, 0, 100),
@@ -100,18 +125,6 @@ INSERT INTO 'hitzone_data' (monster_id, body_part, slash, impact, shot, fire, wa
     (44, 'N/A', 41, 41, 25, 0, 20, 0, 5, 0, 0, 0),
     (44, 'N/A', 26, 26, 20, 0, 15, 0, 5, 0, 0, 0),
     (44, 'N/A', 26, 26, 10, 0, 5, 10, 0, 0, 0,0);
-
-CREATE TABLE `locales` (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50)
-);
-
-CREATE TABLE `monster_locales` (
-    monster_id INT,
-    locale_id INT,
-    FOREIGN KEY (monster_id) REFERENCES monsters(id),
-    FOREIGN KEY (locale_id) REFERENCES locales(id)
-);
 
 INSERT INTO `weapons`(name, info) VALUES
     ('Great Sword', 'A mighty sword that makes up for its lack of mobility with huge, punishing attacks. The Great Sword can also block attacks, making it a good all-around weapon.'),
