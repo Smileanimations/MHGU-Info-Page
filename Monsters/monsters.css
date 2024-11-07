@@ -1,0 +1,101 @@
+body {
+    background-color: #1A2130;
+}
+
+h1, h2, h3, p {
+    font-variant: small-caps;
+    color: aliceblue;
+    text-shadow: 0 0 10px #4f4e4e, 0 0 20px #5e5d5d, 0 0 30px #171717, 0 0 30px #111111, 0 0 40px #141414, 0 0 50px #131313, 0 0 60px #171717;
+    margin-bottom: 0px;
+}
+
+
+#title {
+    font-size: 60px;
+    margin-top: 0px;
+}
+
+#type {
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+#locale {
+    font-size: 45px;
+    margin-top: 0px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom: #EEEEEE 3px solid;
+    padding-bottom: 20px;
+}
+
+.icon-image {
+    width: 100px;
+}
+
+.header {
+    padding-left: 30px;
+}
+
+.index {
+    display: flex;
+    flex-direction:row;
+    border-bottom: #EEEEEE solid 3px;
+    padding-top: 20px;
+}
+
+.index-left {
+    display: inline-block;
+}
+
+.render {
+    padding: 2%;
+    padding-right: 2%;
+    min-width: auto;
+    max-width: 600px;
+    min-height: 400px;
+    max-height: 500px;
+}
+
+.descriptiondiv {
+    padding-left: 50px;
+    padding-right: 110px;
+    max-height: 302px;
+}
+
+.description {
+    color: white;
+    font-size: 30px
+}
+
+.relatedmonsterparent {
+    position: relative;
+    padding-left: 50px;
+    padding-top: 10%;
+    margin-right: 300px;
+}
+
+.relatedmonster {
+    padding: 2%;
+    display: inline-block;
+    text-align: center;
+    width: 166px;
+}
+
+.locales {
+    max-height: 250px;
+    width: 250px;
+}
+
+.localeparent {
+    text-align: center;
+}
+
+.localediv {
+    display: inline-block;
+    padding: 20px;
+}

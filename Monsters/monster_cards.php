@@ -1,5 +1,6 @@
 <?php
-include_once("connection.php");
+include("../connection.php");
+include_once("../nav.html");
 
 $query = $conn->query("SELECT * FROM `monsters`");
 $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -16,23 +17,23 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-
+<div class="topnav">
+  <form method="POST" action="monster_cards.php" type="text" id="input" placeholder="Search..."></form>
+</div>
     <h1 class="title1">Small Monsters</h1>
     <div class="card-list">
     <?php foreach ($monsters as $index => $monster) {
         if ($monster['small_monster'] == 1) {?>
         <div class="card">
             <div class="wrapper">
-                <img src="Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" class="cover-image" alt="Bow Cover" />
+                <img src="../Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" onerror="this.onerror=null; this.src='../Images/Monster Icons/Default_Icon.webp';" class="cover-image" alt="<?=$monster['name']?>" />
             </div>
             <div class="title"><?=$monster['name'];?></div>
-            <img src="Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" />
+            <a href="monsters.php?id=<?= $monster['id']?>"><img src="../Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="<?= $monster['name'];?>" /></a>
         </div>
     <?php }}?>
     </div>
 
-    
-    
     <h1 class="title1">Large Monsters</h1>
     <div class="card-list1">
 
@@ -40,13 +41,13 @@ $monsters = $query->fetchAll(PDO::FETCH_ASSOC);
             if ($monster['small_monster'] == 0) {?>
             <div class="card">
                 <div class="wrapper">
-                    <img src="Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" class="cover-image" alt="Bow Cover" />
+                    <img src="../Images/Monster Icons/<?=str_replace(" ", "_", $monster['name'])?>_Icon.webp" onerror="this.onerror=null; this.src='../Images/Monster Icons/Default_Icon.webp';" class="cover-image" alt="Bow Cover" />
                 </div>
                 <div class="title"><?=$monster['name'];?></div>
-                <img src="Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" />
+                <a href="monsters.php?id=<?= $monster['id']?>"><img src="../Images/Monster Renders/<?=str_replace(" ", "_", $monster['name'])?>_Render.webp" class="character" alt="Bow Character" /></a>
             </div>
             <?php }}?>
-            </div>
+    </div>
 </body>
 
 </html>

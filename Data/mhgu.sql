@@ -10,6 +10,13 @@ CREATE TABLE `weapons` (
     info VARCHAR(500)
 );
 
+CREATE TABLE weapons_chart (
+    ID INT PRIMARY KEY,
+    WEAPON_NAME VARCHAR(255),
+    WEAPON_POPULARITY INT,
+    WEAPON_CLASS VARCHAR(255)
+);
+
 CREATE TABLE `hunter arts` (
     id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
@@ -28,6 +35,7 @@ CREATE TABLE `monsters` (
     description text
 );
 
+<<<<<<< HEAD
 
 -- kan het niet testen op het moment volgensmij was dit de vorige code
 CREATE TABLE hitzone_data (
@@ -105,6 +113,19 @@ INSERT INTO hitzone_data (monster_id, body_part, slash, impact, shot, fire, wate
     (44, 'N/A', 41, 41, 25, 0, 20, 0, 5, 0, 0, 0),
     (44, 'N/A', 26, 26, 20, 0, 15, 0, 5, 0, 0, 0),
     (44, 'N/A', 26, 26, 10, 0, 5, 10, 0, 0, 0,0)
+=======
+CREATE TABLE `locales` (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+CREATE TABLE `monster_locales` (
+    monster_id INT,
+    locale_id INT,
+    FOREIGN KEY (monster_id) REFERENCES monsters(id),
+    FOREIGN KEY (locale_id) REFERENCES locales(id)
+);
+>>>>>>> a4be632ed01b17660eb9d3d7a85e9821a2110c1f
 
 INSERT INTO `weapons`(name, info) VALUES
     ('Great Sword', 'A mighty sword that makes up for its lack of mobility with huge, punishing attacks. The Great Sword can also block attacks, making it a good all-around weapon.'),
@@ -122,6 +143,23 @@ INSERT INTO `weapons`(name, info) VALUES
     ('Heavy Bowgun', 'A powerful, long range projectile weapon. The heavy weight makes mobility a chore, but the firepower makes up for it. Use Crouching Fire to rapidly chain together shots. Hit the target at critical range to maximize damage Critical range varies depending on the ammo.'),
     ('Bow', 'The Bow is a versatile weapon thanks to its variety of Shots, including the long- ranged Arc Shot and the damaging Power Shot, and allows its user to be highly mobile as they fire off coated arrows as support. Hit the target at critical range to maximize the weapons full potential. Critical range varies depending on the type of arrow or arrow coating used.'),
     ('Prowler', 'Registering a Palico as a Prowler will let you control that Palico directly! Switch between modes via the Palico Board.');
+
+INSERT INTO weapons_chart (ID, WEAPON_NAME, WEAPON_POPULARITY, WEAPON_CLASS) VALUES
+    (1, 'Great Sword', 13867, 'Melee'),
+    (2, 'Long Sword', 9800, 'Melee'),
+    (3, 'Sword and Shield', 9124, 'Melee'),
+    (4, 'Dual Blades', 10821, 'Melee'),
+    (5, 'Hammer', 3403, 'Melee'),
+    (6, 'Hunting Horn', 2178, 'Melee'),
+    (7, 'Lance', 1832, 'Melee'),
+    (8, 'Gunlance', 1362, 'Melee'),
+    (9, 'Switchaxe', 7762, 'Melee'),
+    (10, 'Charge Blade', 11187, 'Melee'),
+    (11, 'Insect Glaive', 11821, 'Melee'),
+    (12, 'Light Bowgun', 4919, 'Ranged'),
+    (13, 'Heavy Bowgun', 2058, 'Ranged'),
+    (14, 'Bow', 4076, 'Ranged'),
+    (15, 'Prowler', 5573, 'Special');
 
 
 INSERT INTO `hunter arts`(name, info, weapon) VALUES
@@ -192,6 +230,36 @@ INSERT INTO `hunter arts`(name, info, weapon) VALUES
     ('Blade Wire', 'Binds two arrows together with wire to create a flying blade when fired. All non-Arc Shot and Power Shot charged arrows are swapped temporarily for cutting wire. Cannot be coated, but can sever a monsters tail.', 14),
     ('Tactical Retreat', 'This dual-purpose Art lets you dodge while drawing the bowstring and shooting behind you. Hold down the Charged Attack button to keep the bowstring drawn and save your attack for later. The shot is unaffected by distance.', 14);
 
+INSERT INTO `locales` (name) VALUES
+('Ancestral Steppe'),
+('Arctic Ridge'),
+('Arena'),
+('Castle Shrade'),
+('Desert'),
+('Deserted Island'),
+('Dunes'),
+('Forlorn Citadel'),
+('Fortress'),
+('Frozen Seaway'),
+('Ingle Isle'),
+('Jungle'),
+('Jurassic Frontier'),
+('Marshlands'),
+('Misty Peaks'),
+('Moat Arena'),
+('Polar Field'),
+('Primal Forest'),
+('Ruined Pinnacle'),
+('Sacred Pinnacle'),
+('Sanctuary'),
+('Slayground'),
+('Tower 3'),
+('Verdant Hills'),
+('Volcanic Hollow'),
+('Volcano'),
+('Wyverns End');
+
+
 INSERT INTO `monsters` (name, type, deviant, small_monster, related_monsters, description) VALUES
 ("Altaroth", "Neopteron", false, true, NULL, "Insects that widely inhabit many areas. They absorb fruit, mushrooms, and honey, and then carry them back to their nest. Materials can thus be collected from their swollen abdomens, whose color is related to what they're carrying."),
 ("Anteka", "Herbivore", false, true, NULL, "Herbivores that live in cold climates. Generally docile, though they have been known to attack when threatened. Their high-quality pelts have many uses, and their antlers are highly prized by the Guild. Simply stun the creatures to easily harvest one."),
@@ -229,7 +297,7 @@ INSERT INTO `monsters` (name, type, deviant, small_monster, related_monsters, de
 ("Velociprey", "Bird Wyvern", false, true, "Velocidrome", "Aggressive, carnivorous monsters that often travel and hunt in packs -- even master hunters are careful to not let themselves get surrounded by these predators. In this region, they're known to inhabit the Verdant Hills and the Primal Forest."),
 ("Vespoid", "Neopteron", false, true, NULL, "An enormous, wasp-like insectoid with a poisonous stinger that paralyzes prey. Easily damaged, there are rarely any usable parts left to harvest from them once they are killed. But if you could sap their Health gradually..."),
 ("Zamite", "Amphibian", false, true, "Zamtrios", "Juvenile Zamtrios that use their sharp teeth to pierce the hide of their prey and then burrow inside to consume them from within; those who are attacked must roll around vigorously to shake the monster off. Zamite grow rapidly after even a single feeding."),
-("Agnaktor", "Leviathan", false, false, "Uruktor", "Also known as fire-pike wyverns, Agnaktor use their tough beaks and great strength to burrow effortlessy through rock, and can even burrow into ceilings. Their hardened-lava armor becomes even harder when cooled forming an almost impenetrable armor."),
+("Agnaktor", "Leviathan", false, false, "Uroktor", "Also known as fire-pike wyverns, Agnaktor use their tough beaks and great strength to burrow effortlessy through rock, and can even burrow into ceilings. Their hardened-lava armor becomes even harder when cooled forming an almost impenetrable armor."),
 ("Akantor", "Flying Wyvern", false, false, "Ukanlos", "A wyvern shrouded in mystery and known by many names -- 'the black god' to some, 'the tyrant of fire' to others, but usually called 'Akantor' by the Guild. Its giant spines and tusks make for a fearsome sight in the volcanic areas it frequents."),
 ("Arzuros", "Fanged Beast", false, false, "Redhelm Arzuros", "Beasts known to dwell in humid forest and mountain regions. Though known more for fishing and standing upright to collect honey, their thick claws and heavy forearm plating allow them to deliver powerful blows to any aggressor."),
 ("Redhelm Arzuros", "Fanged Beast", true, false, "Arzuros", "A ruffian known for its wild, red mane of hair. Unrivaled in its cruelty, sightings of a Redhelm near human settlements is a serious call for alarm, though very few can handle hunting it. As it's far more likely for a would-be hunter to end up as its lunch, it requires special permission to hunt."),
@@ -285,7 +353,7 @@ INSERT INTO `monsters` (name, type, deviant, small_monster, related_monsters, de
 ("Furious Rajang", "Fanged Beast", false, false, "Rajang", "Furious Rajang are Rajang variants that are covered in golden fur. Normally Rajang return to their black-furred state after being agitated for a time to conserve energy, but these beasts have lost their ability to curb their anger. Outclassing the standard Rajang's attack power, they assault with seething rage. At the apex of their fury they become enraged and turn into destructive demons with electrified manes."),
 ("Rathalos", "Flying Wyvern", false, false, "Silver Rathalos, Dreadking Rathalos, Rathian, Gold Rathian, Dreadqueen Rathian", "Terrible wyverns called 'Kings of the Skies'. Along with Rathians, they stake wide territories centered around their nests. Rathalos descend on invaders from the sky, attacking with poison claws and breath of fire."),
 ("Dreadking Rathalos", "Flying Wyvern", true, false, "Rathalos, Silver Rathalos, Rathian, Gold Rathian, Dreadqueen Rathian", "Even among the rulers of the sky, the 'Dreadking' is truly the king of kings. A giant, supported by wings as black as the scorched remains of its prey. Humans are usually unworthy of its attention, but it descends with fiery wrath upon intruders to its domain. Requires special permission to hunt."),
-("Silver Rathalos", "Flying Wyvern", false, false, "Rathalos, Dreadqueen Rathalos, Rathian, Gold Rathian, Dreadqueen Rathian", "A rare variant of Rathalos with a beautiful silver body reminiscent of the sun. Little is known about their behavior or physiology -- including the source of their rich silver sheen."),
+("Silver Rathalos", "Flying Wyvern", false, false, "Rathalos, Dreadking Rathalos, Rathian, Gold Rathian, Dreadqueen Rathian", "A rare variant of Rathalos with a beautiful silver body reminiscent of the sun. Little is known about their behavior or physiology -- including the source of their rich silver sheen."),
 ("Rathian", "Flying Wyvern", false, false, "Gold Rathian, Dreadqueen Rathian, Rathalos, Silver Rathalos, Dreadking Rathalos", "Fire-breathing female wyverns, also known as the 'Queens of the Land'. With powerful legs and poison-secreting tails, they hunt mainly on the ground. Sometimes seen preying as a couple, Rathians and Rathalos cooperate well."),
 ("Dreadqueen Rathian", "Flying Wyvern", true, false, "Rathian, Gold Rathian, Rathalos, Silver Rathalos, Dreadking Rathalos", "Every rose has its thorns. The 'Dreadqueen's' thorns are barbs full of deadly venom, and they can scatter a purple cloud of suffocating death in any area she alights. She blooms proud and alone amidst her own desolation. Requires special permission to hunt."),
 ("Gold Rathian", "Flying Wyvern", false, false, "Rathian, Dreadqueen Rathian, Rathalos, Silver Rathalos, Dreadking Rathalos", "A rare variant of Rathian with a beautiful golden body reminiscent of the moon. Little is known about their behavior or physiology -- including the source of their rich golden sheen."),
@@ -296,7 +364,7 @@ INSERT INTO `monsters` (name, type, deviant, small_monster, related_monsters, de
 ("Shogun Ceanataur", "Carapaceon", false, false, "Ceanataur, Rustrazor Ceanataur", "A large Carapaceon with a giant monster's skull on its back. Its long, sharp pincers allow it to pierce volcanic bedrock and travel along ceilings. Sometimes, a precious and valuable pearl can be found inside its shell."),
 ("Rustrazor Ceanataur", "Carapaceon", true, false, "Ceanataur, Shogun Ceanataur", "The Rustrazor Ceanataur uses its huge pincers and the shell on its back to attack any assailants. From its Gravios shell it shoots jets of water that drill into the ground, and its Glavenus-shaped pincers can shear through steel. This two-sided nature makes it a force to be reckoned with, and earned it the name 'Rustrazor'. Requires special permission to hunt."),
 ("Tetsucabra", "Amphibian", false, false, "Drilltusk Tetsucabra", "Amphibians with unique jaws and tusks that they use to sift through rocks for prey. They use their powerful hind legs to traverse steep terrain. It can also use the large boulders it digs up to obstruct a predator's vision and make a hasty retreat."),
-("Drilltusk Tetsucabra", "Amphibian", true, false, "Tetuscabra", "An exceptionally large Tetsucabra with tusks that can drill through earth, or even metal. If the Drilltusk weren't constantly shattering boulders on its enemies or trying to crush them with its weight, one could almost appreciate the masterful way it digs. Requires special permission to hunt."),
+("Drilltusk Tetsucabra", "Amphibian", true, false, "Tetsucabra", "An exceptionally large Tetsucabra with tusks that can drill through earth, or even metal. If the Drilltusk weren't constantly shattering boulders on its enemies or trying to crush them with its weight, one could almost appreciate the masterful way it digs. Requires special permission to hunt."),
 ("Tigrex", "Flying Wyvern", false, false, "Grimclaw Tigrex", "Flying wyverns whose primitive origins are obvious. Prone to violence, they display incredible ferocity with their claws, jaws, and developed limbs. They inhabit a wide area searching for prey, and have even been spotted in regions of harsh cold."),
 ("Grimclaw Tigrex", "Flying Wyvern", true, false, "Tigrex", "Highly developed physical strength lets it trample anything in its way, and its raw power overwhelms the so-called technological strengths that humans have spent centuries cultivating. Even veteran hunters shudder at its name, 'Grimclaw'. Requires special permission to hunt."),
 ("Ukanlos", "Flying Wyvern", false, false, "Akantor", "An enigmatic dragon sighted only deep within the most remote extremes. Its jaws are capable of crushing ice and rock alike. The natives of one region claim its appearance mirrors that of the white god of their legends."),
@@ -322,5 +390,136 @@ INSERT INTO `monsters` (name, type, deviant, small_monster, related_monsters, de
 ("Nakarkos", "Elder Dragon", false, false, NULL, "Frighteningly little is known about this elder dragon whose appetite can devastate surrounding ecosystems. After covering its prey in a repulsive mucus, it has been seen dragging them back to feast in its macabre nest of bones and undulating darkness known as Wyvern's End."),
 ("Shagaru Magala", "Elder Dragon", false, false, "Gore Magala, Chaotic Gore Magala", "The distinctive radiant light of this mature Gore Magala has been seen in the Sanctuary of Heaven's Mount. Some believe Shagaru Magala was the 'foul wind that withered a mountain,' a calamity spoken of in ancient texts."),
 ("Teostra", "Elder Dragon", false, false, NULL, "Brutal elder dragons clothed in flame that spit blazing fire. Teostra are of such a fierce and deadly nature that the Guild keeps track of their movements whenever possible."),
-("Valstrax", "Elder Dragon", false, false, NULL, "An elder dragon that soars at very high altitudes far from human habitation. Its flaming red wings are often the only visible sign of it, giving rise to its nickname, the Argent Comet. Those wings aren't just for flying, though, and are easily used to stab, rend and blow away its enemies. Occasionally, one can find the scorched shells it has left behind.")
+("Valstrax", "Elder Dragon", false, false, NULL, "An elder dragon that soars at very high altitudes far from human habitation. Its flaming red wings are often the only visible sign of it, giving rise to its nickname, the Argent Comet. Those wings aren't just for flying, though, and are easily used to stab, rend and blow away its enemies. Occasionally, one can find the scorched shells it has left behind.");
 
+INSERT INTO `monster_locales` (monster_id, locale_id) VALUES 
+(1, 6), (1, 26), (1, 15), (1, 1), (1, 18), (1, 10), (1, 25), (1, 7), (1, 13), (1, 19),
+(2, 2),
+(3, 5), (3, 26),
+(4, 1), (4, 24), (4, 14), (4, 19),
+(5, 2),
+(6, 6), (6, 15), (6, 1), (6, 18), (6, 10), (6, 25), (6, 7), (6, 13), (6, 19),
+(7, 12), (7, 26), (7, 6), (7, 15), (7, 24), (7, 14), (7, 2), (7, 19),
+(8, 26), (8, 14), (8, 19),
+(9, 5), (9, 7),
+(10, 12), (10, 18), (10, 13), (10, 14), (10, 19),
+(11, 1), (11, 2), (11, 5), (11, 6), (11, 7), (11, 10), (11, 12), (11, 13), (11, 14), (11, 15), (11, 18), (11, 19), (11, 24), (11, 25), (11, 26),
+(12, 15), (12, 1), (12, 13),
+(13, 5), (13, 18), (13, 7), (13, 14),
+(14, 10), (14, 2),
+(15, 12), (15, 5), (15, 19),
+(16, 12), (16, 5), (16, 6), (16, 18), (16, 7), (16, 14), (16, 19),
+(17, 12), (17, 14), (17, 24),
+(18, 26), (18, 18), (18, 25), (18, 7), (18, 14),
+(19, 6), (19, 15), (19, 1), (19, 7), (19, 13),
+(20, 6), (20, 15), (20, 1),
+(21, 12), (21, 26), (21, 6), (21, 15), (21, 1), (21, 18), (21, 25), (21, 7), (21, 13), (21, 24), (21, 14),
+(22, 1), (22, 18), (22, 10), (22, 24), (22, 7), (22, 19),
+(23, 13),
+(24, 6), (24, 15),
+(25, 1), (25, 13), (25, 19),
+(26, 1), (26, 2), (26, 5), (26, 6), (26, 7), (26, 10), (26, 12), (26, 13), (26, 14), (26, 15), (26, 18), (26, 19), (26, 24), (26, 25), (26, 26),
+(27, 6),
+(28, 12), (28, 24), (28, 14),
+(29, 10), (29, 2),
+(30, 12), (30, 5), (30, 26), (30, 1), (30, 10), (30, 25), (30, 7), (30, 19),
+(31, 1), (31, 25), (31, 7), (31, 13),
+(32, 18), (32, 25), (32, 19),
+(33, 26), (33, 25),
+(34, 12), (34, 18), (34, 24),
+(35, 12), (35, 5), (35, 26), (35, 7), (35, 24), (35, 14), (35, 2),
+(36, 2), (36, 10),
+(37, 26), (37, 25),
+(38, 11),
+(39, 23), (39, 6), (39, 15), (39, 19),
+(40, 6), (40, 15), (40, 12), (40, 23), (40, 20),
+(41, 24), (41, 1), (41, 14), (41, 23), (41, 12), (41, 19), (41, 21), (41, 6),
+(42, 24), (42, 1), (42, 14), (42, 11), (42, 21),
+(43, 8),
+(44, 8),
+(45, 2), (45, 10), (45, 17),
+(46, 6), (46, 5), (46, 7),
+(47, 26), (47, 25), (47, 14), (47, 19),
+(48, 2),
+(49, 26), (49, 6), (49, 10), (49, 25),
+(50, 11),
+(51, 12), (51, 23), (51, 15), (51, 17), (51, 14), (51, 2), (51, 19),
+(52, 5), (52, 7),
+(53, 12), (53, 18), (53, 13), (53, 14), (53, 19),
+(54, 12), (54, 5), (54, 6), (54, 18), (54, 7), (54, 19),
+(55, 6), (55, 7), (55, 23), (55, 5), (55, 11),
+(56, 12), (56, 26), (56, 6), (56, 15), (56, 1), (56, 18), (56, 10), (56, 25), (56, 7), (56, 13), (56, 24), (56, 19),
+(57, 6), (57, 15), (57, 1), (57, 18), (57, 10), (57, 25), (57, 7), (57, 2), (57, 24), (57, 26), (57, 5), (57, 17),
+(58, 5), (58, 6), (58, 7),
+(59, 5), (59, 7), (59, 11),
+(60, 15), (60, 6), (60, 14), (60, 12),
+(61, 2), (61, 10), (61, 17), (61, 23),
+(62, 2), (62, 10), (62, 17),
+(63, 5), (63, 23), (63, 18), (63, 7),
+(64, 2), (64, 10),
+(65, 12), (65, 5), (65, 26), (65, 23), (65, 25), (65, 11), (65, 13),
+(66, 13), (66, 12), (66, 26), (66, 25), (66, 11), (66, 7), (66, 5), (66, 23),
+(67, 6), (67, 1), (67, 18), (67, 21), (67, 23), (67, 13),
+(68, 1), (68, 19), (68, 18),
+(69, 26), (69, 18), (69, 25), (69, 11), (69, 14), (69, 19),
+(70, 13), (70, 1), (70, 19),
+(71, 12), (71, 1), (71, 18), (71, 13), (71, 24), (71, 14), (71, 19),
+(72, 26), (72, 18), (72, 25), (72, 11), (72, 14),
+(73, 1), (73, 18),
+(74, 10), (74, 14), (74, 2),
+(75, 6), (75, 12), (75, 15), (75, 19),
+(76, 2), (76, 10),
+(77, 2), (77, 10), (77, 17),
+(78, 26),
+(79, 6), (79, 18), (79, 13), (79, 19),
+(80, 6), (80, 18), (80, 13), (80, 9), (80, 21),
+(81, 12), (81, 23), (81, 15), (81, 20), (81, 18), (81, 19),
+(82, 15), (82, 18), (82, 12), (82, 20),
+(83, 24), (83, 14), (83, 18),
+(84, 12), (84, 23), (84, 6), (84, 15), (84, 21), (84, 13),
+(85, 6), (85, 15), (85, 12), (85, 13), (85, 23), (85, 20), (85, 21),
+(86, 18), (86, 14),
+(87, 7), (87, 5),
+(88, 12), (88, 5), (88, 6), (88, 15), (88, 19),
+(89, 5), (89, 26), (89, 23), (89, 1), (89, 18), (89, 10), (89, 25), (89, 21), (89, 11), (89, 7), (89, 13), (89, 2),
+(90, 12), (90, 26), (90, 23), (90, 20), (90, 1), (90, 18), (90, 21), (90, 11), (90, 13),
+(91, 26), (91, 23), (91, 6), (91, 1), (91, 25), (91, 13), (91, 14), (91, 19),
+(92, 24), (92, 26), (92, 6), (92, 1), (92, 25), (92, 13), (92, 11), (92, 23), (92, 19), (92, 21),
+(93, 23), (93, 15), (93, 13), (93, 24), (93, 19),
+(94, 12), (94, 5), (94, 23), (94, 6), (94, 15), (94, 1), (94, 18), (94, 7), (94, 13), (94, 24), (94, 14), (94, 19),
+(95, 12), (95, 5), (95, 23), (95, 15), (95, 1), (95, 21), (95, 7), (95, 13), (95, 24), (95, 14), (95, 19),
+(96, 12), (96, 23), (96, 15), (96, 13), (96, 19),
+(97, 6), (97, 15), (97, 19),
+(98, 1), (98, 18), (98, 13), (98, 12),
+(99, 1), (99, 18), (99, 13), (99, 12),
+(100, 5), (100, 1), (100, 7), (100, 18), (100, 10), (100, 25),
+(101, 26), (101, 14), (101, 19),
+(102, 11), (102, 14), (102, 26), (102, 19),
+(103, 6), (103, 10), (103, 25), (103, 13),
+(104, 6), (104, 10), (104, 25), (104, 13), (104, 17), (104, 11),
+(105, 5), (105, 15), (105, 17), (105, 1), (105, 18), (105, 10), (105, 21), (105, 7), (105, 13), (105, 14), (105, 2),
+(106, 2), (106, 18), (106, 7), (106, 17), (106, 23), (106, 1), (106, 5), (106, 19), (106, 21),
+(107, 17),
+(108, 26), (108, 25),
+(109, 26), (109, 25), (109, 11),
+(110, 12), (110, 18), (110, 24),
+(111, 5), (111, 26), (111, 6), (111, 7), (111, 13), (111, 19),
+(112, 12), (112, 25), (112, 13), (112, 24), (112, 19),
+(113, 24), (113, 13), (113, 12), (113, 25), (113, 23), (113, 21), (113, 19), (113, 12), (113, 1), (113, 13),
+(114, 24), (114, 14), (114, 19),
+(115, 10), (115, 17),
+(116, 12), (116, 6), (116, 15), (116, 20), (116, 18), (116, 10), (116, 21), (116, 13), (116, 24), (116, 19),
+(117, 13), (117, 15), (117, 10), (117, 21), (117, 23), (117, 6), (117, 12), (117, 19),
+(118, 11),
+(119, 20),
+(120, 12), (120, 23), (120, 1), (120, 18), (120, 24), (120, 14), (120, 19),
+(121, 4),
+(122, 11),
+(123, 4),
+(124, 12), (124, 23), (124, 13), (124, 2), (124, 19),
+(125, 12), (125, 5), (125, 10), (125, 7), (125, 2),
+(126, 9),
+(127, 27),
+(128, 21), (128, 23),
+(129, 5), (129, 26), (129, 25), (129, 11), (129, 7),
+(130, 12), (130, 5), (130, 23), (130, 10), (130, 14), (130, 13), (130, 2), (130, 19);

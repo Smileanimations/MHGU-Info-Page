@@ -1,0 +1,182 @@
+.svg-item {
+    width: 100%;
+    font-size: 16px;
+    margin: 0 auto;
+    animation: donutfade 1s;
+}
+
+@keyframes donutfade {
+
+    0% {
+        opacity: .2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .svg-item {
+        width: 80%;
+    }
+}
+
+.donut-ring {
+    stroke: #EBEBEB;
+}
+
+.donut-segment {
+    transform-origin: center;
+    stroke: #fa5a03;
+}
+
+.donut-segment-1 {
+    stroke: aqua;
+    animation: donut1 3s;
+}
+
+.donut-segment-2 {
+    stroke: #d9e021;
+    animation: donut2 3s;
+}
+
+.donut-segment-3 {
+    stroke: #00ae4c;
+    animation: donut3 3s;
+}
+
+.segment-1 {
+    fill: #ccc;
+}
+
+.segment-1 {
+    fill: aqua;
+}
+
+.segment-2 {
+    fill: #d9e021;
+}
+
+.segment-3 {
+    fill: #11c75a;
+}
+
+.donut-percent {
+    animation: donutfadelong 1s;
+}
+
+@keyframes donutfadelong {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes donut1 {
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+
+    100% {
+        stroke-dasharray: 69, 31;
+    }
+}
+
+@keyframes donut2 {
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+
+    100% {
+        stroke-dasharray: 30, 70;
+    }
+}
+
+@keyframes donut3 {
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+
+    100% {
+        stroke-dasharray: 1, 99;
+    }
+}
+
+.donut-text {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #fa5a03;
+}
+
+.donut-text-1 {
+    fill: aqua;
+}
+
+.donut-text-2 {
+    fill: #d9e021;
+}
+
+.donut-text-3 {
+    fill: #ed1e79;
+}
+
+.donut-label {
+    font-size: 0.28em;
+    font-weight: 700;
+    line-height: 1;
+    fill: #000;
+    transform: translateY(0.25em);
+}
+
+body {
+    background: #191c29;
+}
+
+h1,
+h2,
+h3,
+p {
+    font-variant: small-caps;
+    color: aliceblue;
+    font-size: 30px;
+    text-shadow: 0 0 10px #4f4e4e, 0 0 20px #5e5d5d, 0 0 30px #171717, 0 0 30px #111111, 0 0 40px #141414, 0 0 50px #131313, 0 0 60px #171717;
+    margin-bottom: 0px;
+}
+
+.donut-percent {
+    font-size: 0.5em;
+    line-height: 1;
+    transform: translateY(0.5em);
+    font-weight: bold;
+}
+
+.donut-data {
+    font-size: 0.12em;
+    line-height: 1;
+    transform: translateY(0.5em);
+    text-align: center;
+    text-anchor: middle;
+    font-variant: small-caps;
+    color: #fff;
+    fill: #fff;
+    text-shadow: 0 0 10px #4f4e4e, 0 0 20px #5e5d5d, 0 0 30px #171717, 0 0 30px #111111, 0 0 40px #141414, 0 0 50px #131313, 0 0 60px #171717;
+    margin-bottom: 0px;
+    animation: donutfadelong 1s;
+}
+
+
+
+
+/* ---------- */
+/* just for this presentation */
+html {
+    text-align: center;
+}
+
+.svg-item {
+    max-width: 30%;
+    display: inline-block;
+}
