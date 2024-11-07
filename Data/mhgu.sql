@@ -35,13 +35,13 @@ CREATE TABLE `monsters` (
     description text
 
 CREATE TABLE `hitzone_data` (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id INT NOT NULL,
     monster_id INT,
     hitzone_name VARCHAR(50),
     FOREIGN KEY (monster_id) REFERENCES `monsters`(id)
 );
 
-INSERT INTO hitzone_data (monster_id, body_part, slash, impact, shot, fire, water, thunder, ice, dragon, dizzy, exhaust) VALUES
+INSERT INTO 'hitzone_data' (monster_id, body_part, slash, impact, shot, fire, water, thunder, ice, dragon, dizzy, exhaust) VALUES
     (37, 'Head', 20, 20, 15, 10, 30, 15, 25, 0, 100, 100),
     (37, 'Neck', 20, 20, 15, 10, 15, 0, 15, 0, 0, 100),
     (37, 'Chest', 15, 15, 15, 10, 25, 10, 20, 0, 0, 100),
