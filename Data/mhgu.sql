@@ -33,9 +33,11 @@ CREATE TABLE `monsters` (
     small_monster BOOLEAN NOT NULL,
     related_monsters VARCHAR(100),
     description text
-);
 
+CREATE TABLE `hitzone_data` (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     monster_id INT,
+    hitzone_name VARCHAR(50),
     FOREIGN KEY (monster_id) REFERENCES `monsters`(id)
 );
 
