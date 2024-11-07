@@ -1,5 +1,5 @@
 body {
-    background: #191c29;
+    background-color: #1A2130;
 }
 
 h1, h2, h3, p {
@@ -29,7 +29,8 @@ h1, h2, h3, p {
     display: flex;
     align-items: center;
     padding-left: 20px;
-    border-bottom: black 3px solid;
+    border-bottom: #EEEEEE 3px solid;
+    padding-bottom: 20px;
 }
 
 .icon-image {
@@ -43,7 +44,8 @@ h1, h2, h3, p {
 .index {
     display: flex;
     flex-direction:row;
-    border-bottom: black solid 1px;
+    border-bottom: #EEEEEE solid 3px;
+    padding-top: 20px;
 }
 
 .index-left {
@@ -74,12 +76,14 @@ h1, h2, h3, p {
     position: relative;
     padding-left: 50px;
     padding-top: 10%;
+    margin-right: 300px;
 }
 
 .relatedmonster {
     padding: 2%;
     display: inline-block;
     text-align: center;
+    width: 166px;
 }
 
 .locales {

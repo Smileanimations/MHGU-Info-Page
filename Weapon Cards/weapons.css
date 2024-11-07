@@ -1,0 +1,121 @@
+/* General Body Styling */
+body {
+    background-color: #1A2130;
+}
+
+/* Header Styling */
+h1 {
+    font-variant: small-caps;
+    color: aliceblue;
+    font-size: 60px;
+    text-shadow: 0 0 10px #645151, 0 0 20px #5e5d5d, 0 0 30px #171717, 0 0 30px #111111, 0 0 40px #141414, 0 0 50px #131313, 0 0 60px #171717;
+    margin-bottom: 0px;
+}
+
+#h1 {
+    font-size: 60px;
+    margin-top: 0px;
+}
+
+#type {
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+#locale {
+    font-size: 45px;
+    margin-top: 0px;
+}
+
+.h1 {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom: #EEEEEE 3px solid;
+    padding-bottom: 20px;
+}
+
+/* Container for Image and Description */
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Image Styling */
+.index-left {
+    flex: 1;
+    max-width: 600px;
+}
+
+.cover-image {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    position: absolute;
+    padding: 5px;
+    top: 55%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+#title {
+    font-size: 60px;
+    margin-top: 0px;
+}
+
+/* Description Box Styling */
+.descript {
+    flex: 1;
+    font-variant: small-caps;
+    background-color: #272B3B;
+    border: 1px solid #FFEB3B;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    font-size: 30px;
+    color: #F9FAFB;
+}
+
+/* Paragraph Styling */
+.descript h2 {
+    font-variant: small-caps;
+    margin-top: 0;
+    color: #FFEB3B;
+    font-size: 1.8rem;
+}
+
+.descript p {
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        /* Pas de grootte van h1 aan voor kleine schermen */
+    }
+
+    .cover-image {
+        width: 80%;
+    }
+
+    .descript {
+        max-width: 90%;
+        font-size: 0.9rem;
+        padding: 10px;
+        text-align: center;
+    }
+}

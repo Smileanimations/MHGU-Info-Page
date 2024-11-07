@@ -2,10 +2,8 @@
 include_once("../connection.php");
 include_once("../nav.html");
 
-$icon;
 $query = $conn->query("SELECT * FROM weapons WHERE id=" . $_GET['id']);
 $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 
 <!DOCTYPE html>
@@ -13,33 +11,30 @@ $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weapon details</title>
-    <style>
-        h1 {text-align: center !important; color: white; font-size: 32px; background-color: #111828; width: 275px; margin: auto !important;}
-        body {background-color: #111828;}
-        p {text-align: center; color: white; font-size: larger;}
-        .cover-image {  display: block; margin-left: auto; margin-right: auto; width: 30%;}
-        .descript {text-align: left; font-size: small; border: 1px solid yellow; display: block; margin-left: auto; margin-right: auto;}
-    </style>
+    <title>Weapon Details</title>
+    <link rel="stylesheet" href="weapons.css">
 </head>
 <body>
-<ul class="card-list">
-    <?php foreach ($weapons as $index => $weapon) { ?>
-        <h1><?= $weapon["name"] ?></h1>
-    <br>
-        <div class="card">
-            <div class="wrapper">
-                <?php foreach ($weapons as $index => $weapon) { ?>
-                    <img src="../Images/Weapons/<?= $weapon['name']?>.webp" onerror="this.onerror=null; this.src='../Images/Monster Icons/Default_Icon.webp';" class="cover-image" alt="<?=$weapon['name']?>" />
-                <?php } ?>
-            </div>
+<div class="content-container">
+    <?php if (!empty($weapons)) {
+        $weapon = $weapons[0]; // Since only one weapon detail is expected based on the ID
+    ?>
+        <h1 id="title"><?=$weapon['name']?></h1>
+
+        <div class="index-left">
+            <img src="../Images/Weapons/<?= htmlspecialchars($weapon['name']) ?>.webp"
+                 onerror="this.onerror=null; this.src='../Images/Monster Icons/Default_Icon.webp';"
+                 class="cover-image"
+                 alt="<?= htmlspecialchars($weapon['name']) ?>" />
         </div>
-    <?php }?>
-    <p>Details:</p>
+
         <div class="descript">
-            <?php foreach ($weapons as $index => $weapon) { ?>
-            <p><?= $weapon["info"] ?></p>
-            <?php } ?>
+            <h2>Details:</h2>
+            <p><?= htmlspecialchars($weapon["info"]) ?></p>
         </div>
+    <?php } else { ?>
+        <p>Weapon not found.</p>
+    <?php } ?>
+</div>
 </body>
 </html>

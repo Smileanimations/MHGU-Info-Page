@@ -6,10 +6,10 @@ $query = $conn->query("SELECT * FROM `hunter arts`");
 $arts = $query->fetchAll(PDO::FETCH_ASSOC);
 
 // The following code does not echo var, because it is not NULL. If its given value is changed to NULL, it will print.
-$var = 2;
-if (is_null($var) == true) {
-  echo "thing";
-}
+// $var = 2;
+// if (is_null($var) == true) {
+//   echo "thing";
+// }
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +32,8 @@ if (is_null($var) == true) {
             <th>Details</th>
           </tr>
         </thead>
-        <?php foreach ($arts as $index => $art) { ?>
+        <?php foreach ($arts as $index => $art) { ?> 
+          <?php if (is_null($art['weapon']) == true) { ?>
           <tr>
             <!-- <td><img src="../Images/Weapons/Arts/<?php echo $art['name']?>.png" alt="" class="icons"></td> -->
             <td><?php if (is_null($art['weapon']) == true) {
@@ -42,6 +43,7 @@ if (is_null($var) == true) {
             <td><?php if (is_null($art['weapon']) == true) {
             ?><a href="details.php?id=<?= $art["weapon"] ?>">View details</a><?php } ?></td>
           </tr>
+          <?php } ?>
         <?php } ?>
       </table>
     </div>
