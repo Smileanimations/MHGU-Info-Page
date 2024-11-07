@@ -35,19 +35,8 @@ CREATE TABLE `monsters` (
     description text
 );
 
-CREATE TABLE hitzone_data (
     monster_id INT,
-    body_part VARCHAR(50),
-    slash INT,
-    impact INT,
-    shot INT,
-    fire INT,
-    water INT,
-    thunder INT,
-    ice INT,
-    dragon INT,
-    dizzy INT,
-    exhaust INT
+    FOREIGN KEY (monster_id) REFERENCES `monsters`(id)
 );
 
 INSERT INTO hitzone_data (monster_id, body_part, slash, impact, shot, fire, water, thunder, ice, dragon, dizzy, exhaust) VALUES
