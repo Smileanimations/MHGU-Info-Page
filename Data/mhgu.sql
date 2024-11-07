@@ -53,27 +53,6 @@ CREATE TABLE `hitzones` (
     FOREIGN KEY (monster_id) REFERENCES `monsters`(id)
 );
 
-<<<<<<< HEAD
-
--- kan het niet testen op het moment volgensmij was dit de vorige code
-CREATE TABLE hitzone_data (
-    monster_id INT,
-    body_part VARCHAR(50),
-    slash INT,
-    impact INT,
-    shot INT,
-    fire INT,
-    water INT,
-    thunder INT,
-    ice INT,
-    dragon INT,
-    dizzy INT,
-    exhaust INT
-    monster_id INT,
-    FOREIGN KEY (monster_id) REFERENCES `monsters`(id)
-);
-
--- key moet er nog in
 INSERT INTO hitzone_data (monster_id, body_part, slash, impact, shot, fire, water, thunder, ice, dragon, dizzy, exhaust) VALUES
     (37, 'Head', 20, 20, 15, 10, 30, 15, 25, 0, 100, 100),
     (37, 'Neck', 20, 20, 15, 10, 15, 0, 15, 0, 0, 100),
