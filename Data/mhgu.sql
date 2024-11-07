@@ -28,6 +28,84 @@ CREATE TABLE `monsters` (
     description text
 );
 
+
+-- kan het niet testen op het moment volgensmij was dit de vorige code
+CREATE TABLE hitzone_data (
+    monster_id INT,
+    body_part VARCHAR(50),
+    slash INT,
+    impact INT,
+    shot INT,
+    fire INT,
+    water INT,
+    thunder INT,
+    ice INT,
+    dragon INT,
+    dizzy INT,
+    exhaust INT
+);
+
+-- key moet er nog in
+INSERT INTO hitzone_data (monster_id, body_part, slash, impact, shot, fire, water, thunder, ice, dragon, dizzy, exhaust) VALUES
+    (37, 'Head', 20, 20, 15, 10, 30, 15, 25, 0, 100, 100),
+    (37, 'Neck', 20, 20, 15, 10, 15, 0, 15, 0, 0, 100),
+    (37, 'Chest', 15, 15, 15, 10, 25, 10, 20, 0, 0, 100),
+    (37, 'Stomach', 15, 15, 15, 10, 20, 0, 15, 0, 0, 100),
+    (37, 'Back', 15, 15, 15, 10, 20, 0, 15, 0, 0, 100),
+    (37, 'Forelegs', 15, 15, 15, 10, 20, 0, 20, 0, 0, 100),
+    (37, 'Hind Legs', 20, 20, 15, 10, 20, 5, 15, 0, 0, 100),
+    (37, 'Tail', 20, 24, 20, 5, 15, 10, 10, 20, 0, 100),
+    
+    (38, 'Head', 50, 50, 60, 0, 5, 20, 0, 20, 100, 100),
+    (38, 'Neck', 35, 30, 20, 0, 5, 15, 0, 20, 0, 100),
+    (38, 'Stomach', 35, 40, 25, 0, 5, 15, 0, 15, 0, 100),
+    (38, 'Back', 20, 25, 25, 0, 5, 15, 0, 20, 0, 100),
+    (38, 'Tail', 30, 25, 30, 0, 5, 30, 0, 30, 0, 100),
+    (38, 'Forelegs', 25, 35, 15, 0, 5, 15, 5, 20, 0, 100),
+    (38, 'Hind Legs', 30, 30, 15, 0, 5, 15, 0, 20, 0, 100),
+    
+    (39, 'Head', 55, 55, 55, 20, 5, 10, 15, 0, 100, 100),
+    (39, 'Body', 50, 50, 62, 25, 5, 10, 15, 0, 0, 100),
+    (39, 'Forelegs', 33, 35, 28, 30, 5, 30, 20, 0, 0, 100),
+    (39, 'Rear', 66, 66, 43, 15, 5, 10, 20, 0, 0, 100),
+    (39, 'Stomach / Hind Legs', 55, 55, 38, 15, 5, 10, 20, 0, 0, 100),
+    
+    (40, 'Head', 45, 40, 38, 5, 0, 0, 0, 0, 100, 100),
+    (40, 'Body', 38, 38, 35, 15, 0, 0, 5, 0, 0, 100),
+    (40, 'Forelegs', 20, 20, 30, 20, 0, 15, 10, 0, 0, 100),
+    (40, 'Rear', 25, 34, 25, 5, 0, 0, 15, 0, 0, 100),
+    (40, 'Stomach / Hind Legs', 36, 23, 25, 5, 0, 0, 15, 0, 0, 100),
+    
+    (41, 'Head', 55, 55, 30, 5, 5, 0, 5, 5, 100, 100),
+    (41, 'Stomach', 24, 24, 15, 10, 10, 0, 20, 5, 0, 100),
+    (41, 'Back', 25, 25, 20, 5, 5, 0, 5, 5, 0, 100),
+    (41, 'Wings', 25, 25, 20, 5, 5, 0, 5, 5, 0, 100),
+    (41, 'Feet', 25, 25, 15, 10, 10, 0, 15, 5, 0, 100),
+    (41, 'Tail', 35, 35, 20, 10, 10, 0, 20, 5, 0, 100),
+    (41, 'Tail Tip', 43, 43, 25, 10, 12, 0, 20, 5, 0, 100),
+    (41, 'Wings', 25, 25, 20, 5, 5, 0, 5, 5, 0, 100),
+    
+    (42, 'Head', 55, 55, 30, 5, 5, 0, 5, 5, 100, 100),
+    (42, 'Stomach', 20, 20, 15, 10, 10, 0, 20, 5, 0, 100),
+    (42, 'Neck', 32, 32, 5, 5, 5, 0, 5, 5, 0, 100),
+    (42, 'Wings', 45, 45, 20, 5, 5, 0, 5, 5, 0, 100),
+    (42, 'Feet', 28, 28, 15, 10, 10, 0, 15, 5, 0, 100),
+    (42, 'Tail', 35, 35, 20, 10, 10, 0, 20, 5, 0, 100),
+    (42, 'Tail Tip', 43, 43, 25, 10, 12, 0, 20, 5, 0, 100),
+    
+    (43, 'Head', 70, 70, 50, 0, 20, 25, 5, 0, 100, 100),
+    (43, 'Claws', 55, 55, 20, 0, 10, 20, 5, 0, 0, 100),
+    (43, 'Arms', 55, 55, 20, 0, 15, 15, 5, 0, 0, 100),
+    (43, 'Back', 38, 38, 35, 0, 10, 15, 0, 0, 100, 100),
+    (43, 'Body', 25, 25, 20, 0, 5, 10, 0, 0, 0, 100),
+    (43, 'Feet', 45, 45, 20, 0, 5, 10, 0, 0, 0, 100),
+    (43, 'Tail', 20, 20, 45, 0, 15, 20, 5, 0, 0, 100),
+    
+    (44, 'N/A', 5, 5, 5, 0, 0, 0, 0, 0, 0, 0),
+    (44, 'N/A', 41, 41, 25, 0, 20, 0, 5, 0, 0, 0),
+    (44, 'N/A', 26, 26, 20, 0, 15, 0, 5, 0, 0, 0),
+    (44, 'N/A', 26, 26, 10, 0, 5, 10, 0, 0, 0,0)
+
 INSERT INTO `weapons`(name, info) VALUES
     ('Great Sword', 'A mighty sword that makes up for its lack of mobility with huge, punishing attacks. The Great Sword can also block attacks, making it a good all-around weapon.'),
     ('Long Sword', 'A nimble weapon capable of extended combos. Charge up energy with each attack to use your powerful Spirit Blade attack'),
