@@ -35,8 +35,6 @@ CREATE TABLE `monsters` (
     description text
 );
 
-<<<<<<< HEAD
-
 -- kan het niet testen op het moment volgensmij was dit de vorige code
 CREATE TABLE hitzone_data (
     monster_id INT,
@@ -113,7 +111,6 @@ INSERT INTO hitzone_data (monster_id, body_part, slash, impact, shot, fire, wate
     (44, 'N/A', 41, 41, 25, 0, 20, 0, 5, 0, 0, 0),
     (44, 'N/A', 26, 26, 20, 0, 15, 0, 5, 0, 0, 0),
     (44, 'N/A', 26, 26, 10, 0, 5, 10, 0, 0, 0,0)
-=======
 CREATE TABLE `locales` (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50)
@@ -125,7 +122,6 @@ CREATE TABLE `monster_locales` (
     FOREIGN KEY (monster_id) REFERENCES monsters(id),
     FOREIGN KEY (locale_id) REFERENCES locales(id)
 );
->>>>>>> a4be632ed01b17660eb9d3d7a85e9821a2110c1f
 
 INSERT INTO `weapons`(name, info) VALUES
     ('Great Sword', 'A mighty sword that makes up for its lack of mobility with huge, punishing attacks. The Great Sword can also block attacks, making it a good all-around weapon.'),
