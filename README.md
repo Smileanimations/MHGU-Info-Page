@@ -14,8 +14,11 @@ Our project includes a DB and runs on the local host. Displaying monster with vi
 
 ### How to install
 1. clone repo(https://github.com/Smileanimations/MHGU-Website-Remake.git)
-2. run data.sql
+2. run xampp
 3. run website on local host
 
 ### How to use
-still work in progress will release a guide when project is ready.
+On the front page there is a menu to navigate to different pages such as weapons arts etc...
+You can navigate to the detail page by clicking on the cards.
+Monster cards Related to other varients and locations based on said monster.
+There is a page for universal hunter arts and weapon specific arts click on said weapon to see which they have.
