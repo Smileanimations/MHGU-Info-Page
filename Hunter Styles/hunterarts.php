@@ -29,19 +29,18 @@ $arts = $query->fetchAll(PDO::FETCH_ASSOC);
             <!-- <th>Visual</th> -->
             <th>Name</th>
             <th>Description</th>
-            <th>Details</th>
+            <th>Example</th>
           </tr>
         </thead>
         <?php foreach ($arts as $index => $art) { ?> 
           <?php if (is_null($art['weapon']) == true) { ?>
           <tr>
-            <!-- <td><img src="../Images/Weapons/Arts/<?php echo $art['name']?>.png" alt="" class="icons"></td> -->
             <td><?php if (is_null($art['weapon']) == true) {
               print $art["name"]; } ?></td>
             <td><?php if (is_null($art['weapon']) == true) {
               print $art["info"]; } ?></td>
             <td><?php if (is_null($art['weapon']) == true) {
-            ?><a href="details.php?id=<?= $art["weapon"] ?>">View details</a><?php } ?></td>
+            ?><img src="../Images/Weapons/Arts<?php echo $art['name']?>.png" alt="profile" class="image"><?php } ?></td>
           </tr>
           <?php } ?>
         <?php } ?>
