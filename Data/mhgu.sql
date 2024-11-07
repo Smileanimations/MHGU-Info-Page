@@ -37,18 +37,18 @@ CREATE TABLE `monsters` (
 
 CREATE TABLE `hitzone_data` (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    monster_id INT,
+    monster_id INT NOT ,
     body_part VARCHAR(50),
-    slash MEDIUMINT,
-    impact MEDIUMINT,
-    shot MEDIUMINT,
-    fire MEDIUMINT,
-    water MEDIUMINT,
-    thunder MEDIUMINT,
-    ice MEDIUMINT,
-    dragon MEDIUMINT,
-    dizzy MEDIUMINT,
-    exhaust MEDIUMINT,
+    slash INT,
+    impact INT,
+    shot INT,
+    fire INT,
+    water INT,
+    thunder INT,
+    ice INT,
+    dragon INT,
+    dizzy INT,
+    exhaust INT,
     FOREIGN KEY (monster_id) REFERENCES `monsters`(id)
 );
 
@@ -65,7 +65,7 @@ CREATE TABLE `monster_locales` (
 );
 
 
-INSERT INTO 'hitzone_data' (monster_id, body_part, slash, impact, shot, fire, water, thunder, ice, dragon, dizzy, exhaust) VALUES
+INSERT INTO hitzone_data (monster_id, body_part, slash, impact, shot, fire, water, thunder, ice, dragon, dizzy, exhaust) VALUES
     (37, 'Head', 20, 20, 15, 10, 30, 15, 25, 0, 100, 100),
     (37, 'Neck', 20, 20, 15, 10, 15, 0, 15, 0, 0, 100),
     (37, 'Chest', 15, 15, 15, 10, 25, 10, 20, 0, 0, 100),
