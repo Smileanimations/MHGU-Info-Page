@@ -69,6 +69,8 @@ CREATE TABLE hitzone_data (
     dragon INT,
     dizzy INT,
     exhaust INT
+    monster_id INT,
+    FOREIGN KEY (monster_id) REFERENCES `monsters`(id)
 );
 
 -- key moet er nog in
