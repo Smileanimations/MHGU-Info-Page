@@ -26,7 +26,6 @@ $arts = $query->fetchAll(PDO::FETCH_ASSOC);
       <table>
         <thead>
           <tr>
-            <!-- <th>Visual</th> -->
             <th>Name</th>
             <th>Description</th>
             <th>Example</th>
@@ -39,8 +38,8 @@ $arts = $query->fetchAll(PDO::FETCH_ASSOC);
               print $art["name"]; } ?></td>
             <td><?php if (is_null($art['weapon']) == true) {
               print $art["info"]; } ?></td>
-            <td><?php if (is_null($art['weapon']) == true) {
-            ?><img src="../Images/Weapons/Arts<?php echo $art['name']?>.png" alt="profile" class="image"><?php } ?></td>
+            <td><?php if (empty($art['weapon'])) {
+            ?><img src="../Images/Weapons/Arts<?=str_replace(" ", "_", $art['name'])?>.png" alt="wip" class="image"><?php } ?></td>
           </tr>
           <?php } ?>
         <?php } ?>
