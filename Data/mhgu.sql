@@ -48,8 +48,7 @@ CREATE TABLE `hitzone_data` (
     ice INT,
     dragon INT,
     dizzy INT,
-    exhaust INT,
-    FOREIGN KEY (monster_id) REFERENCES `monsters`(id)
+    exhaust INT
 );
 
 CREATE TABLE `locales` (
