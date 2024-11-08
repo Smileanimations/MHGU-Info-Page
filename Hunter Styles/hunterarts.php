@@ -39,7 +39,7 @@ $arts = $query->fetchAll(PDO::FETCH_ASSOC);
             <td><?php if (is_null($art['weapon']) == true) {
               print $art["info"]; } ?></td>
             <td><?php if (empty($art['weapon'])) {
-            ?><img src="../Images/Weapons/Arts<?=str_replace(" ", "_", $art['name'])?>.png" alt="wip" class="image"><?php } ?></td>
+            ?><img src="../Images/Weapons/Arts/<?=str_replace(" ", "_", $art['name'])?>.png" alt="wip" class="image"><?php } ?></td>
           </tr>
           <?php } ?>
         <?php } ?>
